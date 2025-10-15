@@ -3,24 +3,37 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --header-background: #F4F4F480;
+  --header-text: #808080;
+  --login-button: #CBCBCB80;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-roboto);
+  --font-mono: var(--font-roboto);
+  --color-header-background: var(--header-background);
+  --color-header-text: var(--header-text);
+  --color-login-button: var(--login-button);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --header-background: #39373780;
+    --header-text: #BABABA;
+    --login-button: #54535380;
   }
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
 }
