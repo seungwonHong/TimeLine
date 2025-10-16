@@ -6,6 +6,10 @@
   --header-background: #F4F4F480;
   --header-text: #808080;
   --login-button: #CBCBCB80;
+  --button-bg: #000000;
+  --button-text: #ffffff;
+  --button-hover: #3c3c3c;
+  --button-hover-transparent: #e8e8e8;
 }
 
 @theme inline {
@@ -16,15 +20,23 @@
   --color-header-background: var(--header-background);
   --color-header-text: var(--header-text);
   --color-login-button: var(--login-button);
+  --color-button-bg: var(--button-bg);
+  --color-button-text: var(--button-text);
+  --color-button-hover: var(--button-hover);
+  --color-button-hover-transparent: var(--button-hover-transparent);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --header-background: #39373780;
+    --header-background: #25252580;
     --header-text: #BABABA;
-    --login-button: #54535380;
+    --login-button: #3f3f3f99;
+    --button-bg: #ffffff;
+    --button-text: #000000;
+    --button-hover: #c1c1c1;
+    --button-hover-transparent: #222222;
   }
 }
 

@@ -1,0 +1,104 @@
+import React from "react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+
+const Fields = () => {
+  return (
+    <div className="flex flex-col items-center justify-center 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem]">
+      <div className="2xl:w-[60rem] lg:w-[40rem] md:w-[32rem] w-[28rem] mx-auto text-center">
+        <h2 className="2xl:text-[4.8rem] lg:text-[3.2rem] text-[2.4rem] font-normal">
+          The community for developers across fields
+        </h2>
+      </div>
+
+      <div className="flex flex-row items-center overflow-x-auto 2xl:gap-[2.4rem] lg:gap-[2rem] md:gap-[1.6rem] gap-[1.2rem] 2xl:mt-[6.4rem] lg:mt-[4rem] md:mt-[2.4rem] mt-[1.6rem]">
+        <div className="flex flex-col shrink-0">
+          <img
+            src="/images/Programmer.png"
+            alt="Programmer"
+            className="aspect-square 2xl:w-[51.7rem] lg:w-[42.8rem] md:w-[37.7rem] w-[25.8rem]"
+          />
+          <span className="2xl:text-[3.2rem] lg:text-[2.4rem] md:text-[2rem] text-[1.6rem] font-normal 2xl:mt-[2rem] lg:mt-[1.6rem] md:mt-[1.2rem] mt-[0.8rem]">
+            Programmer
+          </span>
+          <Link
+            href="/"
+            className="flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
+          >
+            <div className="flex flex-row items-center justify-center rounded-full 2xl:w-[2.8rem] lg:w-[2.4rem] md:w-[2rem] w-[1.6rem] 2xl:h-[2.8rem] lg:h-[2.4rem] md:h-[2rem] h-[1.6rem] border-[1px] border-current">
+              <ArrowRight className="2xl:w-[2rem] lg:w-[1.6rem] md:w-[1.2rem] w-[1rem] 2xl:h-[2rem] lg:h-[1.6rem] md:h-[1.2rem] h-[1rem]" />
+            </div>
+            <span className="2xl:text-[2rem] lg:text-[1.6rem] md:text-[1.2rem] text-[1rem] font-normal 2xl:ml-[1.2rem] lg:ml-[0.8rem] md:ml-[0.6rem] ml-[0.4rem]">
+              View more
+            </span>
+          </Link>
+        </div>
+        <div className="flex flex-col shrink-0">
+          <img
+            src="/images/VideoCreator.png"
+            alt="Video Creator"
+            className="aspect-square 2xl:w-[51.7rem] lg:w-[42.8rem] md:w-[37.7rem] w-[25.8rem]"
+          />
+          <span className="2xl:text-[3.2rem] lg:text-[2.4rem] md:text-[2rem] text-[1.6rem] font-normal 2xl:mt-[2rem] lg:mt-[1.6rem] md:mt-[1.2rem] mt-[0.8rem]">
+            Video Creator
+          </span>
+          <Link
+            href="/"
+            className="flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
+          >
+            <div className="flex flex-row items-center justify-center rounded-full 2xl:w-[2.8rem] lg:w-[2.4rem] md:w-[2rem] w-[1.6rem] 2xl:h-[2.8rem] lg:h-[2.4rem] md:h-[2rem] h-[1.6rem] border-[1px] border-current">
+              <ArrowRight className="2xl:w-[2rem] lg:w-[1.6rem] md:w-[1.2rem] w-[1rem] 2xl:h-[2rem] lg:h-[1.6rem] md:h-[1.2rem] h-[1rem]" />
+            </div>
+            <span className="2xl:text-[2rem] lg:text-[1.6rem] md:text-[1.2rem] text-[1rem] font-normal 2xl:ml-[1.2rem] lg:ml-[0.8rem] md:ml-[0.6rem] ml-[0.4rem]">
+              View more
+            </span>
+          </Link>
+        </div>
+        <div className="flex flex-col shrink-0">
+          <img
+            src="/images/MusicCreator.png"
+            alt="Music Creator"
+            className="aspect-square 2xl:w-[51.7rem] lg:w-[42.8rem] md:w-[37.7rem] w-[25.8rem]"
+          />
+          <span className="2xl:text-[3.2rem] lg:text-[2.4rem] md:text-[2rem] text-[1.6rem] font-normal 2xl:mt-[2rem] lg:mt-[1.6rem] md:mt-[1.2rem] mt-[0.8rem]">
+            Music Creator
+          </span>
+          <Link
+            href="/"
+            className="flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
+          >
+            <div className="flex flex-row items-center justify-center rounded-full 2xl:w-[2.8rem] lg:w-[2.4rem] md:w-[2rem] w-[1.6rem] 2xl:h-[2.8rem] lg:h-[2.4rem] md:h-[2rem] h-[1.6rem] border-[1px] border-current">
+              <ArrowRight className="2xl:w-[2rem] lg:w-[1.6rem] md:w-[1.2rem] w-[1rem] 2xl:h-[2rem] lg:h-[1.6rem] md:h-[1.2rem] h-[1rem]" />
+            </div>
+            <span className="2xl:text-[2rem] lg:text-[1.6rem] md:text-[1.2rem] text-[1rem] font-normal 2xl:ml-[1.2rem] lg:ml-[0.8rem] md:ml-[0.6rem] ml-[0.4rem]">
+              View more
+            </span>
+          </Link>
+        </div>
+        <div className="flex flex-col shrink-0">
+          <img
+            src="/images/Designer.png"
+            alt="Designer"
+            className="aspect-square 2xl:w-[51.7rem] lg:w-[42.8rem] md:w-[37.7rem] w-[25.8rem]"
+          />
+          <span className="2xl:text-[3.2rem] lg:text-[2.4rem] md:text-[2rem] text-[1.6rem] font-normal 2xl:mt-[2rem] lg:mt-[1.6rem] md:mt-[1.2rem] mt-[0.8rem]">
+            Designer
+          </span>
+          <Link
+            href="/"
+            className="flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
+          >
+            <div className="flex flex-row items-center justify-center rounded-full 2xl:w-[2.8rem] lg:w-[2.4rem] md:w-[2rem] w-[1.6rem] 2xl:h-[2.8rem] lg:h-[2.4rem] md:h-[2rem] h-[1.6rem] border-[1px] border-current">
+              <ArrowRight className="2xl:w-[2rem] lg:w-[1.6rem] md:w-[1.2rem] w-[1rem] 2xl:h-[2rem] lg:h-[1.6rem] md:h-[1.2rem] h-[1rem]" />
+            </div>
+            <span className="2xl:text-[2rem] lg:text-[1.6rem] md:text-[1.2rem] text-[1rem] font-normal 2xl:ml-[1.2rem] lg:ml-[0.8rem] md:ml-[0.6rem] ml-[0.4rem]">
+              View more
+            </span>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Fields;

@@ -1,0 +1,39 @@
+/* gradient-shadow.css */
+.gradient-shadow {
+  position: relative;
+  transform-style: preserve-3d;
+   transform: translate(0);
+}
+
+.gradient-shadow::before {
+  content: "";
+  position: absolute;
+  inset: -5px; /* spread: 카드보다 12px 더 크게 */
+  transform: translate3d(10px,8px,-1px);
+  border-radius: inherit;
+  background: linear-gradient(90deg, #fdfbc3 0%, #f08bae 29%, #80adfb 63%, #f6b4e4 100%);
+  filter: blur(40px); /* 그림자 번짐 */
+  opacity: 0.3; /* 그림자 투명도 */
+  z-index: -1;
+  pointer-events: none;
+}
+
+.gradient-shadow-company-card {
+  position: relative;
+  transform-style: preserve-3d;
+   transform: translate(0);
+}
+
+.gradient-shadow-company-card::before {
+  content: "";
+  position: absolute;
+  inset: -5px; /* spread: 카드보다 12px 더 크게 */
+  transform: translate3d(-1px,-1px,-1px);
+  border-radius: inherit;
+  background: linear-gradient(90deg, #fdfbc3 0%, #f08bae 29%, #80adfb 63%, #f6b4e4 100%);
+  filter: blur(6px); /* 그림자 번짐 */
+  opacity: 0.8; /* 그림자 투명도 */
+  z-index: -1;
+  pointer-events: none;
+}
+
