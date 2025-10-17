@@ -7,6 +7,8 @@ import Fields from "@/features/landing/components/Fields";
 import Journey from "@/features/landing/components/Journey";
 import Subscription from "@/features/landing/components/Subscription";
 import Plan from "@/features/landing/components/Plan";
+import { ArrowDown } from "lucide-react";
+import Footer from "@/features/landing/components/Footer";
 
 type Props = {};
 
@@ -38,11 +40,23 @@ const LandingPage = (props: Props) => {
         </Button>
       </div>
 
-          <ViewHome />
-          <Fields />
-          <Journey />
-          <Subscription />
-          <Plan />
+      <ViewHome />
+      <Fields />
+      <Journey />
+      <Subscription />
+      <Plan />
+
+      <div className="flex flex-col items-center justify-center 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem] 2xl:w-[39rem] lg:w-[32rem] md:w-[24rem] w-[20rem] mx-auto">
+        <h2 className="2xl:text-[4.8rem] lg:text-[3.2rem] text-[2.4rem] font-normal text-center">
+          Start building your creative journey
+        </h2>
+        <ArrowDown className="2xl:w-[3.2rem] lg:w-[2.4rem] md:w-[1.6rem] w-[1.2rem] 2xl:h-[3.2rem] lg:h-[2.4rem] md:h-[1.6rem] h-[1.2rem] 2xl:mt-[3.2rem] lg:mt-[2.4rem] md:mt-[1.6rem] mt-[1.2rem] text-[#808080]" />
+        <Button className="2xl:text-[2rem] lg:text-[1.6rem] text-[1.2rem] font-regular hover:bg-[var(--button-hover)] duration-300 ease-in-out cursor-pointer 2xl:mt-[3.2rem] lg:mt-[2.4rem] md:mt-[1.6rem] mt-[1.2rem]">
+          Get Started
+        </Button>
+      </div>
+
+      <Footer />
     </div>
   );
 };

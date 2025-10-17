@@ -1,3 +1,4 @@
+import SubscriptionCard from "@/shared/components/SubscriptionCard";
 import React from "react";
 
 const Plan = () => {
@@ -10,6 +11,55 @@ const Plan = () => {
         Select the subscription plan for platform that fits your needs and
         unlock exclusive benefits.
       </span>
+
+      <div className="lg:grid lg:grid-cols-3 hidden 2xl:gap-[2.4rem] lg:gap-[2rem] gap-[1.6rem] 2xl:mt-[6.4rem] lg:mt-[4rem] md:mt-[2.4rem] mt-[1.6rem] w-full mx-auto">
+        <SubscriptionCard
+          planName="Free"
+          price="0"
+          features={[
+            "Free to post & create topics",
+            "Post length up to 500 characters",
+            "image upload up to 5MB",
+            "Video upload up to 100MB",
+            "Create up to 30 topics",
+          ]}
+          type="plan"
+          buttonText="Get Started"
+          buttonLink="/"
+        />
+        <SubscriptionCard
+          planName="Pro"
+          price="4.99"
+          features={[
+            "Free to post & create topics",
+            "Post length up to 500 characters",
+            "image upload up to 20MB",
+            "Video upload up to 250MB",
+            "Create up to 100 topics",
+            "Access to personal subscription plan",
+            "50% fewer ads",
+          ]}
+          type="plan"
+          buttonText="Subscribe"
+          buttonLink="/"
+        />
+        <SubscriptionCard
+          planName="Ultimate"
+          price="6.99"
+          features={[
+            "Free to post & create topics",
+            "Post length up to 500 characters",
+            "image upload up to 50MB",
+            "Video upload up to 500MB",
+            "Unlimited topic creation",
+            "Access to personal subscription plan",
+            "No ads",
+          ]}
+          type="plan"
+          buttonText="Subscribe"
+          buttonLink="/"
+        />
+      </div>
     </div>
   );
 };

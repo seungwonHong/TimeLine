@@ -23,7 +23,7 @@ const Fields = () => {
           </span>
           <Link
             href="/"
-            className="flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
+            className="w-fit flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
           >
             <div className="flex flex-row items-center justify-center rounded-full 2xl:w-[2.8rem] lg:w-[2.4rem] md:w-[2rem] w-[1.6rem] 2xl:h-[2.8rem] lg:h-[2.4rem] md:h-[2rem] h-[1.6rem] border-[1px] border-current">
               <ArrowRight className="2xl:w-[2rem] lg:w-[1.6rem] md:w-[1.2rem] w-[1rem] 2xl:h-[2rem] lg:h-[1.6rem] md:h-[1.2rem] h-[1rem]" />
@@ -44,7 +44,7 @@ const Fields = () => {
           </span>
           <Link
             href="/"
-            className="flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
+            className="w-fit flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
           >
             <div className="flex flex-row items-center justify-center rounded-full 2xl:w-[2.8rem] lg:w-[2.4rem] md:w-[2rem] w-[1.6rem] 2xl:h-[2.8rem] lg:h-[2.4rem] md:h-[2rem] h-[1.6rem] border-[1px] border-current">
               <ArrowRight className="2xl:w-[2rem] lg:w-[1.6rem] md:w-[1.2rem] w-[1rem] 2xl:h-[2rem] lg:h-[1.6rem] md:h-[1.2rem] h-[1rem]" />
@@ -65,7 +65,7 @@ const Fields = () => {
           </span>
           <Link
             href="/"
-            className="flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
+            className="w-fit flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
           >
             <div className="flex flex-row items-center justify-center rounded-full 2xl:w-[2.8rem] lg:w-[2.4rem] md:w-[2rem] w-[1.6rem] 2xl:h-[2.8rem] lg:h-[2.4rem] md:h-[2rem] h-[1.6rem] border-[1px] border-current">
               <ArrowRight className="2xl:w-[2rem] lg:w-[1.6rem] md:w-[1.2rem] w-[1rem] 2xl:h-[2rem] lg:h-[1.6rem] md:h-[1.2rem] h-[1rem]" />
@@ -86,7 +86,7 @@ const Fields = () => {
           </span>
           <Link
             href="/"
-            className="flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
+            className="w-fit flex flex-row items-center cursor-pointer 2xl:mt-[1.4rem] lg:mt-[1.2rem] md:mt-[1rem] mt-[0.8rem] text-[#808080] hover:text-[#6299FF] transition-all duration-300 ease-in-out"
           >
             <div className="flex flex-row items-center justify-center rounded-full 2xl:w-[2.8rem] lg:w-[2.4rem] md:w-[2rem] w-[1.6rem] 2xl:h-[2.8rem] lg:h-[2.4rem] md:h-[2rem] h-[1.6rem] border-[1px] border-current">
               <ArrowRight className="2xl:w-[2rem] lg:w-[1.6rem] md:w-[1.2rem] w-[1rem] 2xl:h-[2rem] lg:h-[1.6rem] md:h-[1.2rem] h-[1rem]" />
