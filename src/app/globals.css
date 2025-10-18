@@ -3,13 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --header-background: #F4F4F480;
+  --header-background: #f4f4f480;
   --header-text: #808080;
-  --login-button: #CBCBCB80;
+  --login-button: #cbcbcb80;
   --button-bg: #000000;
   --button-text: #ffffff;
   --button-hover: #3c3c3c;
   --button-hover-transparent: #e8e8e8;
+  --landing-tab-button: #f8f8f8;
+  --landing-tab-button-active: #ffffff;
 }
 
 @theme inline {
@@ -24,6 +26,8 @@
   --color-button-text: var(--button-text);
   --color-button-hover: var(--button-hover);
   --color-button-hover-transparent: var(--button-hover-transparent);
+  --color-landing-tab-button: var(--landing-tab-button);
+  --color-landing-tab-button-active: var(--landing-tab-button-active);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,21 +35,24 @@
     --background: #0a0a0a;
     --foreground: #ededed;
     --header-background: #25252580;
-    --header-text: #BABABA;
+    --header-text: #bababa;
     --login-button: #3f3f3f99;
     --button-bg: #ffffff;
     --button-text: #000000;
     --button-hover: #c1c1c1;
     --button-hover-transparent: #222222;
+    --landing-tab-button: #25252580;
+    --landing-tab-button-active: #000000;
   }
 }
 
-.font-robotoMono{
+.font-robotoMono {
   font-family: var(--font-roboto-mono), Arial, Helvetica, sans-serif;
 }
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {

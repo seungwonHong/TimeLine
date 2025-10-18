@@ -2,7 +2,7 @@ import React from "react";
 
 const Journey = () => {
   return (
-    <div className="2xl:w-[160rem] lg:w-[120rem] md:w-[56rem] w-[37rem] mx-auto 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem]">
+    <div id="section-2" className="2xl:w-[160rem] lg:w-[120rem] md:w-[56rem] w-[37rem] mx-auto 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem]">
       <div className="2xl:text-[4.8rem] lg:text-[3.2rem] text-[2.4rem] font-normal 2xl:w-[47rem] lg:w-[32rem] md:w-[24rem] w-[26rem] mx-auto text-center">
         The complete journey for developers
       </div>

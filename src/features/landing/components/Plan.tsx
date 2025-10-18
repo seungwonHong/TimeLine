@@ -1,9 +1,14 @@
+"use client";
 import SubscriptionCard from "@/shared/components/SubscriptionCard";
 import React from "react";
+import TabButton from "@/shared/components/TabButton";
+import { useTabStore } from "../store/tabButton";
 
 const Plan = () => {
+  const { activeTab } = useTabStore();
+
   return (
-    <div className="2xl:mx-[16rem] lg:mx-[12rem] md:mx-[3.2rem] mx-[1.6rem] 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem]">
+    <div id="section-4" className="2xl:w-[160rem] lg:w-[120rem] md:w-[56rem] w-[37rem] mx-auto 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem]">
       <h1 className="2xl:text-[4.8rem] lg:text-[3.2rem] text-[2.4rem] font-normal 2xl:w-[47rem] lg:w-[32rem] md:w-[24rem] w-[20rem] mx-auto text-center">
         Choose your plan
       </h1>
@@ -12,7 +17,63 @@ const Plan = () => {
         unlock exclusive benefits.
       </span>
 
-      <div className="lg:grid lg:grid-cols-3 hidden 2xl:gap-[2.4rem] lg:gap-[2rem] gap-[1.6rem] 2xl:mt-[6.4rem] lg:mt-[4rem] md:mt-[2.4rem] mt-[1.6rem] w-full mx-auto">
+      <div className="lg:hidden flex flex-col items-center justify-center md:mt-[2.4rem] mt-[1.6rem]">
+        <TabButton tabs={["Free", "Pro", "Ultimate"]} type="landing" />
+
+        {activeTab === "Free" && (
+          <SubscriptionCard
+            planName="Free"
+            price="0"
+            features={[
+              "Free to post & create topics",
+              "Post length up to 500 characters",
+              "image upload up to 5MB",
+              "Video upload up to 100MB",
+              "Create up to 30 topics",
+            ]}
+            type="plan"
+            buttonText="Get Started"
+            buttonLink="/"
+            size="small"
+          />
+        )}
+        {activeTab === "Pro" && (
+          <SubscriptionCard
+            planName="Pro"
+            price="4.99"
+            features={[
+              "Free to post & create topics",
+              "Post length up to 500 characters",
+              "image upload up to 5MB",
+              "Video upload up to 100MB",
+              "Create up to 30 topics",
+            ]}
+            type="plan"
+            buttonText="Subscribe"
+            buttonLink="/"
+            size="small"
+          />
+        )}
+        {activeTab === "Ultimate" && (
+          <SubscriptionCard
+            planName="Ultimate"
+            price="6.99"
+            features={[
+              "Free to post & create topics",
+              "Post length up to 500 characters",
+              "image upload up to 5MB",
+              "Video upload up to 100MB",
+              "Create up to 30 topics",
+            ]}
+            type="plan"
+            buttonText="Subscribe"
+            buttonLink="/"
+            size="small"
+          />
+        )}
+      </div>
+
+      <div className="lg:grid lg:grid-cols-3 hidden 2xl:gap-[2.4rem] lg:gap-[2rem] gap-[1.6rem] 2xl:mt-[6.4rem] lg:mt-[4rem] w-full mx-auto">
         <SubscriptionCard
           planName="Free"
           price="0"
@@ -26,6 +87,7 @@ const Plan = () => {
           type="plan"
           buttonText="Get Started"
           buttonLink="/"
+          size="large"
         />
         <SubscriptionCard
           planName="Pro"
@@ -42,6 +104,7 @@ const Plan = () => {
           type="plan"
           buttonText="Subscribe"
           buttonLink="/"
+          size="large"
         />
         <SubscriptionCard
           planName="Ultimate"
@@ -58,6 +121,7 @@ const Plan = () => {
           type="plan"
           buttonText="Subscribe"
           buttonLink="/"
+          size="large"
         />
       </div>
     </div>

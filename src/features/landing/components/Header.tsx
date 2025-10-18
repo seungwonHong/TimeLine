@@ -1,30 +1,123 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import "@/features/landing/styles/header.css";
 
 const Header = () => {
-    const [clicked, setClicked] = useState(0);
-    
+  const [clicked, setClicked] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const isManualScroll = useRef(false);
+
+  const handleClick = (value: number) => {
+    isManualScroll.current = true;
+    setClicked(value);
+    const element = document.getElementById(`section-${value}`);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setTimeout(() => {
+      isManualScroll.current = false;
+    }, 1000);
+  };
+
+  // 로고 전환 관련 코드
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // 섹션 스크롤 관련 코드
+  useEffect(() => {
+    const sections = ["section-1", "section-2", "section-3", "section-4"];
+
+    const getRootMargin = () => {
+      if (window.innerWidth >= 1536) return "-80px 0px 0px 0px"; // 2xl
+      if (window.innerWidth >= 1024) return "-60px 0px 0px 0px"; // lg
+      if (window.innerWidth >= 768) return "-40px 0px 0px 0px"; // md
+      return "-30px 0px 0px 0px"; // 기본
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (isManualScroll.current) return;
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            const sectionNumber = parseInt(sectionId.split("-")[1]);
+            setClicked(sectionNumber);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // 50% 보일 때 트리거
+        rootMargin: getRootMargin(), // 헤더 높이만큼 오프셋
+      }
+    );
+
+    // 각 섹션 관찰 시작
+    sections.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      sections.forEach((id) => {
+        const element = document.getElementById(id);
+        if (element) observer.unobserve(element);
+      });
+    };
+  }, []);
+
   return (
     <div className="sticky top-[2rem] 2xl:mt-[4rem] lg:mt-[3rem] mt-[2rem] flex flex-row items-center justify-between 2xl:p-[1.6rem] lg:p-[0.6rem] p-[0.4rem] 2xl:rounded-[2.4rem] lg:rounded-[1.2rem] rounded-[1.2rem] mx-auto 2xl:w-[1067px] lg:w-[704px] w-[343px] md:w-[600px] bg-[var(--header-background)] z-50 backdrop-blur-sm">
-      {/* 원래 글씨였다가 스크롤하면 로고로 바뀌도록 설계 -> 로고는 등장할 때 살짝 회전*/}
-      <img
-        src="/icons/LogoBlack.png"
-        alt="logo"
-        className="2xl:w-[56px] 2xl:h-[56px] lg:w-[48px] lg:h-[48px] md:w-[36px] md:h-[36px] w-[32px] h-[32px] dark:hidden block"
-      />
-      <img
-        src="/icons/LogoWhite.png"
-        alt="logo"
-        className="2xl:w-[56px] 2xl:h-[56px] lg:w-[48px] lg:h-[48px] md:w-[36px] md:h-[36px] w-[32px] h-[32px] dark:block hidden"
-      />
+      {/* 화면상 맨 위면 글씨였다가 스크롤하면 로고로 바뀌도록 설계 -> 로고는 등장할 때 살짝 회전*/}
+      {isScrolled ? (
+        // 스크롤 시 로고 (회전 애니메이션)
+        <AnimatePresence mode="wait">
+          <motion.div
+            key="logo"
+            initial={{ rotate: 30, opacity: 0 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            exit={{ rotate: -30, opacity: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 200,
+              damping: 20,
+              duration: 0.6,
+            }}
+          >
+            <img
+              src="/icons/LogoBlack.png"
+              alt="logo"
+              className="2xl:w-[56px] 2xl:h-[56px] lg:w-[48px] lg:h-[48px] md:w-[36px] md:h-[36px] w-[32px] h-[32px] dark:hidden block"
+            />
+            <img
+              src="/icons/LogoWhite.png"
+              alt="logo"
+              className="2xl:w-[56px] 2xl:h-[56px] lg:w-[48px] lg:h-[48px] md:w-[36px] md:h-[36px] w-[32px] h-[32px] dark:block hidden"
+            />
+          </motion.div>
+        </AnimatePresence>
+      ) : (
+        // 맨 위일 때 텍스트
+        <span className="2xl:text-[2.4rem] lg:text-[2rem] md:text-[2rem] text-[1.6rem] font-medium">
+          TimeLine
+        </span>
+      )}
 
       <div className="flex flex-row items-center justify-center 2xl:text-[2rem] lg:text-[1.4rem] text-[1rem] font-normal 2xl:gap-[2rem] lg:gap-[1.6rem] gap-[1.2rem] text-[var(--header-text)]">
         <span
           className={`cursor-pointer hover:text-[var(--foreground)] transition-all duration-300 ${
             clicked === 1 ? "text-[var(--foreground)]" : ""
           }`}
-          onClick={() => setClicked(1)}
+          onClick={() => {
+            handleClick(1);
+          }}
         >
           Fields
         </span>
@@ -32,7 +125,9 @@ const Header = () => {
           className={`cursor-pointer hover:text-[var(--foreground)] transition-all duration-300 ${
             clicked === 2 ? "text-[var(--foreground)]" : ""
           }`}
-          onClick={() => setClicked(2)}
+          onClick={() => {
+            handleClick(2);
+          }}
         >
           Journey
         </span>
@@ -40,7 +135,9 @@ const Header = () => {
           className={`cursor-pointer hover:text-[var(--foreground)] transition-all duration-300 ${
             clicked === 3 ? "text-[var(--foreground)]" : ""
           }`}
-          onClick={() => setClicked(3)}
+          onClick={() => {
+            handleClick(3);
+          }}
         >
           Subscription
         </span>
@@ -48,7 +145,9 @@ const Header = () => {
           className={`cursor-pointer hover:text-[var(--foreground)] transition-all duration-300 ${
             clicked === 4 ? "text-[var(--foreground)]" : ""
           }`}
-          onClick={() => setClicked(4)}
+          onClick={() => {
+            handleClick(4);
+          }}
         >
           Pricing
         </span>
