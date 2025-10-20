@@ -8,16 +8,25 @@ const Plan = () => {
   const { activeTab } = useTabStore();
 
   return (
-    <div id="section-4" className="2xl:w-[160rem] lg:w-[120rem] md:w-[56rem] w-[37rem] mx-auto 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem]">
-      <h1 className="2xl:text-[4.8rem] lg:text-[3.2rem] text-[2.4rem] font-normal 2xl:w-[47rem] lg:w-[32rem] md:w-[24rem] w-[20rem] mx-auto text-center">
+    <div
+      id="section-4"
+      className="2xl:w-[160rem] lg:w-[120rem] md:w-[56rem] w-[37rem] mx-auto 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem]"
+    >
+      <h1
+        className="2xl:text-[4.8rem] lg:text-[3.2rem] text-[2.4rem] font-normal 2xl:w-[47rem] lg:w-[32rem] md:w-[24rem] w-[20rem] mx-auto text-center"
+        data-aos="fade-up"
+      >
         Choose your plan
       </h1>
-      <span className="block 2xl:text-[2rem] lg:text-[1.6rem] md:text-[1.2rem] text-[1rem] font-normal text-[#BBBBBB] mx-auto text-center 2xl:w-[52rem] lg:w-[36rem] md:w-[24rem] w-[20rem]">
+      <span
+        className="block 2xl:text-[2rem] lg:text-[1.6rem] md:text-[1.2rem] text-[1rem] font-normal text-[#BBBBBB] mx-auto text-center 2xl:w-[52rem] lg:w-[36rem] md:w-[24rem] w-[20rem]"
+        data-aos="fade-up"
+      >
         Select the subscription plan for platform that fits your needs and
         unlock exclusive benefits.
       </span>
 
-      <div className="lg:hidden flex flex-col items-center justify-center md:mt-[2.4rem] mt-[1.6rem]">
+      <div className="lg:hidden flex flex-col items-center justify-center md:mt-[2.4rem] mt-[1.6rem]" data-aos="fade-up">
         <TabButton tabs={["Free", "Pro", "Ultimate"]} type="landing" />
 
         {activeTab === "Free" && (
@@ -44,9 +53,11 @@ const Plan = () => {
             features={[
               "Free to post & create topics",
               "Post length up to 500 characters",
-              "image upload up to 5MB",
-              "Video upload up to 100MB",
-              "Create up to 30 topics",
+              "image upload up to 20MB",
+              "Video upload up to 250MB",
+              "Create up to 100 topics",
+              "Access to personal subscription plan",
+              "50% fewer ads",
             ]}
             type="plan"
             buttonText="Subscribe"
@@ -61,9 +72,11 @@ const Plan = () => {
             features={[
               "Free to post & create topics",
               "Post length up to 500 characters",
-              "image upload up to 5MB",
-              "Video upload up to 100MB",
-              "Create up to 30 topics",
+              "image upload up to 50MB",
+              "Video upload up to 500MB",
+              "Unlimited topic creation",
+              "Access to personal subscription plan",
+              "No ads",
             ]}
             type="plan"
             buttonText="Subscribe"
@@ -73,7 +86,10 @@ const Plan = () => {
         )}
       </div>
 
-      <div className="lg:grid lg:grid-cols-3 hidden 2xl:gap-[2.4rem] lg:gap-[2rem] gap-[1.6rem] 2xl:mt-[6.4rem] lg:mt-[4rem] w-full mx-auto">
+      <div
+        className="lg:grid lg:grid-cols-3 hidden 2xl:gap-[2.4rem] lg:gap-[2rem] gap-[1.6rem] 2xl:mt-[6.4rem] lg:mt-[4rem] w-full mx-auto"
+        data-aos="fade-up"
+      >
         <SubscriptionCard
           planName="Free"
           price="0"

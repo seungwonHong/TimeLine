@@ -6,12 +6,17 @@
   --header-background: #f4f4f480;
   --header-text: #808080;
   --login-button: #cbcbcb80;
+  --login-button-hover: #b0afaf80;
   --button-bg: #000000;
   --button-text: #ffffff;
   --button-hover: #3c3c3c;
   --button-hover-transparent: #e8e8e8;
   --landing-tab-button: #f8f8f8;
   --landing-tab-button-active: #ffffff;
+  --help-card-background: #f8f8f8;
+  --privacy-policy-navigation-text: #cccccc;
+  --privacy-policy-navigation-text-selected: #000000;
+  --privacy-policy-navigation-text-hover: #000000;
 }
 
 @theme inline {
@@ -28,6 +33,11 @@
   --color-button-hover-transparent: var(--button-hover-transparent);
   --color-landing-tab-button: var(--landing-tab-button);
   --color-landing-tab-button-active: var(--landing-tab-button-active);
+  --color-login-button-hover: var(--login-button-hover);
+  --color-help-card-background: var(--help-card-background);
+  --color-privacy-policy-navigation-text: var(--privacy-policy-navigation-text);
+  --color-privacy-policy-navigation-text-hover: var(--privacy-policy-navigation-text-hover);
+  --color-privacy-policy-navigation-text-selected: var(--privacy-policy-navigation-text-selected);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,6 +53,11 @@
     --button-hover-transparent: #222222;
     --landing-tab-button: #25252580;
     --landing-tab-button-active: #000000;
+    --login-button-hover: #5f5f5f99;
+    --help-card-background: #1a1a1a;
+    --privacy-policy-navigation-text: #515050;
+      --privacy-policy-navigation-text-selected: #ffffff;
+    --privacy-policy-navigation-text-hover: #ffffff;
   }
 }
 

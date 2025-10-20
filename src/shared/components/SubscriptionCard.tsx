@@ -23,7 +23,7 @@ const SubscriptionCard = ({
 }: SubscriptionCardProps) => {
   return (
     <div
-      className={`flex flex-col 2xl:rounded-[3.2rem] lg:rounded-[2.4rem] md:rounded-[1.6rem] rounded-[1.2rem] lg:bg-[#F5F7FC] 2xl:h-[82rem] lg:h-[62rem] md:h-[42rem] h-[32rem] 2xl:p-[3.2rem] lg:p-[2.4rem] md:p-[1.6rem] p-[1.2rem] w-full ${
+      className={`flex flex-col 2xl:rounded-[3.2rem] lg:rounded-[2.4rem] md:rounded-[1.6rem] rounded-[1.2rem] lg:bg-[#F5F7FC] 2xl:h-[82rem] lg:h-[62rem] md:h-[46rem] h-[36rem] 2xl:p-[3.2rem] lg:p-[2.4rem] md:p-[1.6rem] p-[1.2rem] w-full ${
         size === "small"
           ? "md:w-[47rem] w-[37rem] text-[var(--foreground)]"
           : "text-black"
