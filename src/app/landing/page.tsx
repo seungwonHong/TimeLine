@@ -9,6 +9,7 @@ import Subscription from "@/features/landing/components/Subscription";
 import Plan from "@/features/landing/components/Plan";
 import { ArrowDown } from "lucide-react";
 import Footer from "@/features/landing/components/Footer";
+import "@/features/landing/styles/fadeDownAnimation.css";
 
 const LandingPage = () => {
   return (
@@ -16,19 +17,19 @@ const LandingPage = () => {
       <Header />
 
       <div className="text-center 2xl:w-[99rem] lg:w-[80rem] md:w-[56rem] w-[34rem] mx-auto 2xl:mt-[12rem] lg:mt-[8rem] mt-[4rem]">
-        <h1 className="2xl:text-[6.4rem] lg:text-[4.8rem] text-[3.2rem] font-medium">
+        <h1 className="2xl:text-[6.4rem] lg:text-[4.8rem] text-[3.2rem] font-medium fade-down-custom">
           The best platform to communicate with developers
         </h1>
       </div>
 
       <div className="2xl:mt-[2rem] lg:mt-[1.2rem] mt-[0.8rem] 2xl:w-[80rem] lg:w-[56rem] md:w-[48rem] w-[34rem] mx-auto">
-        <p className="2xl:text-[2.4rem] lg:text-[1.6rem] text-[1.2rem] text-[var(--header-text)] font-light text-center">
+        <p className="2xl:text-[2.4rem] lg:text-[1.6rem] text-[1.2rem] text-[var(--header-text)] font-light text-center fade-down-delay-1">
           TimeLine is the best platform for various kind of developers. You can
           post your ideas, create a topics, recruit people for projects.
         </p>
       </div>
 
-      <div className="flex flex-row items-center justify-center 2xl:mt-[6rem] lg:mt-[4rem] mt-[2rem] 2xl:gap-[2rem] lg:gap-[1.6rem] gap-[1.2rem]">
+      <div className="flex flex-row items-center justify-center 2xl:mt-[6rem] lg:mt-[4rem] mt-[2rem] 2xl:gap-[2rem] lg:gap-[1.6rem] gap-[1.2rem] fade-down-delay-2">
         <Button className="2xl:text-[2rem] lg:text-[1.6rem] text-[1.2rem] font-regular hover:bg-[var(--button-hover)] duration-300 ease-in-out">
           Get Started
         </Button>
@@ -41,6 +42,7 @@ const LandingPage = () => {
       <ViewHome />
       <Fields />
       <Journey />
+      {/* 여기에 영상 컴포넌트들 넣기(포스팅, 토픽 생성) */}
       <Subscription />
       <Plan />
 

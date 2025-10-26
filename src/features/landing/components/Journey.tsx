@@ -7,12 +7,12 @@ const Journey = () => {
         The complete journey for developers
       </div>
 
-      <div className="grid lg:grid-cols-3 grid-cols-1 2xl:gap-[2.4rem] lg:gap-[2rem] gap-[1.6rem] w-full 2xl:mt-[6.4rem] lg:mt-[4rem] md:mt-[2.4rem] mt-[1.6rem]">
+      <div className="grid lg:grid-cols-3 grid-cols-1 2xl:gap-[2.4rem] lg:gap-[2rem] gap-[6.4rem] w-full 2xl:mt-[6.4rem] lg:mt-[4rem] md:mt-[2.4rem] mt-[1.6rem]">
         <div className="flex flex-col w-full " data-aos="fade-up">
           <img
             src="/images/Communicate.png"
             alt="Communicate"
-            className="w-full h-full object-cover aspect-square"
+            className="w-full h-full object-cover md:aspect-square aspect-[16/9] rounded-[1.6rem]"
           />
           <span className="2xl:text-[3.2rem] md:text-[2.4rem] text-[2rem] font-normal">
             Communicate <span className="text-[#808080]">with developers</span>
@@ -26,7 +26,7 @@ const Journey = () => {
           <img
             src="/images/Collaborate.png"
             alt="Collaborate"
-            className="w-full h-full object-cover aspect-square"
+            className="w-full h-full object-cover md:aspect-square aspect-[16/9] rounded-[1.6rem]"
           />
           <span className="2xl:text-[3.2rem] md:text-[2.4rem] text-[2rem] font-normal">
             Collaborate <span className="text-[#808080]">with developers</span>
@@ -40,7 +40,7 @@ const Journey = () => {
           <img
             src="/images/Grow.png"
             alt="Grow"
-            className="w-full h-full object-cover aspect-square"
+            className="w-full h-full object-cover md:aspect-square aspect-[16/9] rounded-[1.6rem]"
           />
           <span className="2xl:text-[3.2rem] md:text-[2.4rem] text-[2rem] font-normal">
             Grow <span className="text-[#808080]">with developers</span>

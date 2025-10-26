@@ -55,3 +55,57 @@ html {
     scroll-margin-top: 12rem; /* 2xl */
   }
 }
+
+#termsofuse-1,
+#termsofuse-2,
+#termsofuse-3,
+#termsofuse-4,
+#termsofuse-5,
+#termsofuse-6,
+#termsofuse-7,
+#termsofuse-8,
+#termsofuse-9 {
+  scroll-margin-top: 8rem; /* 기본 모바일 */
+}
+
+@media (min-width: 768px) {
+  #termsofuse-1,
+  #termsofuse-2,
+  #termsofuse-3,
+  #termsofuse-4,
+  #termsofuse-5,
+  #termsofuse-6,
+  #termsofuse-7,
+  #termsofuse-8,
+  #termsofuse-9 {
+    scroll-margin-top: 8rem; /* md */
+  }
+}
+
+@media (min-width: 1024px) {
+  #termsofuse-1,
+  #termsofuse-2,
+  #termsofuse-3,
+  #termsofuse-4,
+  #termsofuse-5,
+  #termsofuse-6,
+  #termsofuse-7,
+  #termsofuse-8,
+  #termsofuse-9 {
+    scroll-margin-top: 10rem; /* lg */
+  }
+}
+
+@media (min-width: 1536px) {
+  #termsofuse-1,
+  #termsofuse-2,
+  #termsofuse-3,
+  #termsofuse-4,
+  #termsofuse-5,
+  #termsofuse-6,
+  #termsofuse-7,
+  #termsofuse-8,
+  #termsofuse-9 {
+    scroll-margin-top: 12rem; /* 2xl */
+  }
+}

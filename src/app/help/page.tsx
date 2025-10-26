@@ -36,8 +36,8 @@ const Help = () => {
             helps us improve and deliver a better experience.
           </p>
 
-          <div className="flex flex-col 2xl:rounded-[1.6rem] lg:rounded-[1.2rem] md:rounded-[1rem] rounded-[0.8rem] 2xl:w-[100rem] lg:w-[60rem] md:w-[48rem] w-[32rem] mx-auto bg-help-card-background 2xl:mt-[6rem] lg:mt-[4rem] md:mt-[2rem] mt-[1rem] shadow-lg">
-            <div className="w-full flex flex-row items-center 2xl:gap-[1rem] lg:gap-[0.8rem] md:gap-[0.6rem] gap-[0.4rem] 2xl:rounded-t-[1.6rem] lg:rounded-t-[1.2rem] md:rounded-t-[1rem] rounded-t-[0.8rem] 2xl:p-[2rem] lg:p-[1.6rem] md:p-[1.2rem] p-[1rem]">
+          <div className="flex flex-col 2xl:rounded-[1.6rem] lg:rounded-[1.2rem] md:rounded-[1rem] rounded-[0.8rem] 2xl:w-[100rem] lg:w-[60rem] md:w-[48rem] w-[36rem] mx-auto bg-help-card-background 2xl:mt-[6rem] lg:mt-[4rem] md:mt-[2.4rem] mt-[1.6rem] shadow-lg">
+            <div className="w-full flex flex-row items-center 2xl:gap-[1rem] lg:gap-[0.8rem] md:gap-[0.6rem] gap-[0.4rem] 2xl:rounded-t-[1.6rem] lg:rounded-t-[1.2rem] md:rounded-t-[1rem] rounded-t-[0.8rem] 2xl:p-[2rem] lg:p-[1.6rem] md:p-[1.2rem] p-[0.8rem]">
               <img
                 src="/icons/LogoBlack.png"
                 alt="logo"
@@ -49,7 +49,7 @@ const Help = () => {
                 className="2xl:w-[48px] 2xl:h-[48px] lg:w-[32px] lg:h-[32px] md:w-[24px] md:h-[24px] w-[22px] h-[22px] dark:block hidden"
               />
               <span className="2xl:text-[2rem] lg:text-[1.6rem] md:text-[1.4rem] text-[1.4rem] font-medium">
-                Bug Reports & Share Feedbacks
+                Bug Reports, Feedback & Support Requests
               </span>
             </div>
 

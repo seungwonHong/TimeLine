@@ -3,11 +3,15 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import "@/features/landing/styles/header.css";
+import { useSectionObserver } from "../hooks/useSectionObserver";
 
 const Header = () => {
   const [clicked, setClicked] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const isManualScroll = useRef(false);
+  const sections = ["section-1", "section-2", "section-3", "section-4"];
+
+  useSectionObserver({ isManualScroll, setClicked, sections });
 
   const handleClick = (value: number) => {
     isManualScroll.current = true;
@@ -21,56 +25,12 @@ const Header = () => {
     }, 1000);
   };
 
-  // 로고 전환 관련 코드
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // 섹션 스크롤 관련 코드
-  useEffect(() => {
-    const sections = ["section-1", "section-2", "section-3", "section-4"];
-
-    const getRootMargin = () => {
-      if (window.innerWidth >= 1536) return "-80px 0px 0px 0px"; // 2xl
-      if (window.innerWidth >= 1024) return "-60px 0px 0px 0px"; // lg
-      if (window.innerWidth >= 768) return "-40px 0px 0px 0px"; // md
-      return "-30px 0px 0px 0px"; // 기본
-    };
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (isManualScroll.current) return;
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const sectionId = entry.target.id;
-            const sectionNumber = parseInt(sectionId.split("-")[1]);
-            setClicked(sectionNumber);
-          }
-        });
-      },
-      {
-        threshold: 0.3, // 50% 보일 때 트리거
-        rootMargin: getRootMargin(), // 헤더 높이만큼 오프셋
-      }
-    );
-
-    // 각 섹션 관찰 시작
-    sections.forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
-
-    return () => {
-      sections.forEach((id) => {
-        const element = document.getElementById(id);
-        if (element) observer.unobserve(element);
-      });
-    };
   }, []);
 
   return (

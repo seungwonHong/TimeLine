@@ -1,0 +1,29 @@
+.fade-down-custom {
+  animation: fadeDownCustom 1.2s ease-in-out forwards;
+}
+
+.fade-down-delay-1 {
+  animation: fadeDownCustom 1.2s ease-in-out 0.3s forwards;
+  opacity: 0;
+}
+
+.fade-down-delay-2 {
+  animation: fadeDownCustom 1.2s ease-in-out 0.6s forwards;
+  opacity: 0;
+}
+
+.fade-down-delay-3 {
+  animation: fadeDownCustom 1.2s ease-in-out 0.9s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeDownCustom {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
