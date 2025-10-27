@@ -5,59 +5,59 @@ const Footer = () => {
   return (
     <div className="flex flex-col 2xl:mx-[16rem] lg:mx-[12rem] md:mx-[3.2rem] mx-[1.6rem] 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem] 2xl:pb-[15rem] lg:pb-[10rem] pb-[6rem] ">
       <div className="flex flex-row items-start 2xl:gap-[10rem] lg:gap-[6.8rem] gap-[4.8rem]">
-        <div className="flex flex-col">
-          <span className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal ">
+        <div className="flex flex-col md:gap-[0.4rem] gap-[0.6rem]">
+          <span className="2xl:text-[2rem] md:text-[1.4rem] text-[1.6rem] font-normal ">
             Product
           </span>
           <Link
             href="/privacy"
-            className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
+            className="2xl:text-[2rem] md:text-[1.4rem] text-[1.6rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
           >
             Privacy
           </Link>
           <Link
             href="/termsofuse"
-            className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
+            className="2xl:text-[2rem] md:text-[1.4rem] text-[1.6rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
           >
             Terms of Use
           </Link>
           <Link
             href="/rules"
-            className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
+            className="2xl:text-[2rem] md:text-[1.4rem] text-[1.6rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
           >
             Rules
           </Link>
           <Link
             href="/updates"
-            className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
+            className="2xl:text-[2rem] md:text-[1.4rem] text-[1.6rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
           >
             Updates
           </Link>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col md:gap-[0.4rem] gap-[0.6rem]">
           <span className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal ">
             Resources
           </span>
           <Link
             href="/help"
-            className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
+            className="2xl:text-[2rem] md:text-[1.4rem] text-[1.6rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
           >
             Help
           </Link>
         </div>
-        <div className="flex flex-col">
-          <span className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal ">
+        <div className="flex flex-col md:gap-[0.4rem] gap-[0.6rem]">
+          <span className="2xl:text-[2rem] md:text-[1.4rem] text-[1.6rem] font-normal ">
             Connect
           </span>
           <Link
             href="/"
-            className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
+            className="2xl:text-[2rem] md:text-[1.4rem] text-[1.6rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
           >
             X
           </Link>
           <a
             href="https://www.instagram.com/timeline_io.official"
-            className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
+            className="2xl:text-[2rem] md:text-[1.4rem] text-[1.6rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
           >
             Instagram
           </a>

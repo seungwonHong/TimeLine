@@ -17,7 +17,7 @@ const Journey = () => {
           <span className="2xl:text-[3.2rem] md:text-[2.4rem] text-[2rem] font-normal">
             Communicate <span className="text-[#808080]">with developers</span>
           </span>
-          <span className="2xl:text-[1.6rem] md:text-[1.2rem] text-[1.2rem] font-normal text-[#BBBBBB]">
+          <span className="2xl:text-[1.6rem] text-[1.4rem] font-normal text-[#BBBBBB]">
             Easily share your thoughts and exchange knowledge with developers
             around the world.
           </span>
@@ -31,7 +31,7 @@ const Journey = () => {
           <span className="2xl:text-[3.2rem] md:text-[2.4rem] text-[2rem] font-normal">
             Collaborate <span className="text-[#808080]">with developers</span>
           </span>
-          <span className="2xl:text-[1.6rem] md:text-[1.2rem] text-[1.2rem] font-normal text-[#BBBBBB]">
+          <span className="2xl:text-[1.6rem] text-[1.4rem] font-normal text-[#BBBBBB]">
             Work together not only with programmers but also with designers,
             musicians, and video creators to bring diverse ideas to life.
           </span>
@@ -45,7 +45,7 @@ const Journey = () => {
           <span className="2xl:text-[3.2rem] md:text-[2.4rem] text-[2rem] font-normal">
             Grow <span className="text-[#808080]">with developers</span>
           </span>
-          <span className="2xl:text-[1.6rem] md:text-[1.2rem] text-[1.2rem] font-normal text-[#BBBBBB]">
+          <span className="2xl:text-[1.6rem] text-[1.4rem] font-normal text-[#BBBBBB]">
             Grow together by sharing knowledge and ideas with various kind of
             developers.
           </span>

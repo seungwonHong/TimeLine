@@ -8,7 +8,7 @@ const Subscription = () => {
           Build <span className="text-[#808080]">your own </span>Subscription
           Plans
         </h1>
-        <span className="2xl:text-[2rem] lg:text-[1.6rem] md:text-[1.2rem] text-[1rem] font-normal text-[#BBBBBB]" data-aos="fade-up">
+        <span className="2xl:text-[2rem] lg:text-[1.6rem] text-[1.4rem] font-normal text-[#BBBBBB]" data-aos="fade-up">
           Create valuable contents and monetize your work by building your own
           subscription plans. Offer exclusive insights, resources, or
           experiences to your subscribers and grow a sustainable income stream.
@@ -26,7 +26,7 @@ const Subscription = () => {
           Build <span className="text-[#808080]">your own </span>Subscription
           Plans
         </h1>
-        <span className="2xl:text-[2rem] lg:text-[1.6rem] md:text-[1.2rem] text-[1rem] font-normal text-[#BBBBBB]" data-aos="fade-up">
+        <span className="2xl:text-[2rem] lg:text-[1.6rem] text-[1.4rem] font-normal text-[#BBBBBB]" data-aos="fade-up">
           Create valuable contents and monetize your work by building your own
           subscription plans. Offer exclusive insights, resources, or
           experiences to your subscribers and grow a sustainable income stream.
