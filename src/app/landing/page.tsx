@@ -30,10 +30,10 @@ const LandingPage = () => {
       </div>
 
       <div className="flex flex-row items-center justify-center 2xl:mt-[6rem] lg:mt-[4rem] mt-[2rem] 2xl:gap-[2rem] lg:gap-[1.6rem] gap-[1.2rem] fade-down-delay-2">
-        <Button className="2xl:text-[2rem] lg:text-[1.6rem] text-[1.2rem] font-regular hover:bg-[var(--button-hover)] duration-300 ease-in-out">
+        <Button className="2xl:text-[2rem] lg:text-[1.6rem] text-[1.4rem] font-regular hover:bg-[var(--button-hover)] duration-300 ease-in-out px-[2rem] py-[0.8rem]">
           Get Started
         </Button>
-        <Button className="flex flex-row items-center justify-center gap-2 2xl:text-[2rem] lg:text-[1.6rem] text-[1.2rem] font-regular bg-transparent text-[var(--foreground)] hover:bg-[var(--button-hover-transparent)] duration-300 ease-in-out">
+        <Button className="flex flex-row items-center justify-center gap-2 2xl:text-[2rem] lg:text-[1.6rem] text-[1.4rem] font-regular bg-transparent text-[var(--foreground)] hover:bg-[var(--button-hover-transparent)] duration-300 ease-in-out px-[2rem] py-[0.8rem]">
           Explore{" "}
           <ChevronRight className="lg:w-[2rem] lg:h-[2rem] w-[1.6rem] h-[1.6rem]" />
         </Button>
