@@ -16,7 +16,6 @@ const robotoMono = Roboto_Mono({
   weight: ["100", "300", "400", "500", "700"],
 });
 
-export { roboto, robotoMono };
 export const metadata: Metadata = {
   title: "TimeLine",
   description:
