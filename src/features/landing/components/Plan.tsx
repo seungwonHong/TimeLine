@@ -64,6 +64,7 @@ const Plan = () => {
             buttonText="Subscribe"
             buttonLink="/"
             size="small"
+            className="md:mt-[2.4rem] mt-[1.6rem]"
           />
         )}
         {activeTab === "Ultimate" && (
@@ -83,6 +84,7 @@ const Plan = () => {
             buttonText="Subscribe"
             buttonLink="/"
             size="small"
+            className="md:mt-[2.4rem] mt-[1.6rem]"
           />
         )}
       </div>
