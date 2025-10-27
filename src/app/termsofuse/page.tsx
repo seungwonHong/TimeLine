@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import FooterHeader from "@/features/landing/components/FooterHeader";
 import Footer from "@/features/landing/components/Footer";
