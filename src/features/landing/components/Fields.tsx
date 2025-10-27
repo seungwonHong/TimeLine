@@ -9,9 +9,9 @@ const Fields = () => {
       id="section-1"
       className="flex flex-col items-center justify-center 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem]"
     >
-      <div className="2xl:w-[60rem] lg:w-[40rem] md:w-[32rem] w-[28rem] mx-auto text-center">
+      <div className="2xl:w-[60rem] lg:w-[40rem] md:w-[32rem] w-[32rem] mx-auto text-center">
         <h2
-          className="2xl:text-[4.8rem] lg:text-[3.2rem] text-[2.4rem] font-normal"
+          className="2xl:text-[4.8rem] lg:text-[3.2rem] text-[2.8rem] font-normal"
           data-aos="fade-up"
         >
           The community for developers across fields

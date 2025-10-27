@@ -4,7 +4,7 @@ const Subscription = () => {
   return (
     <section id="section-3" className="flex lg:flex-row flex-col items-center justify-center 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem] 2xl:w-[160rem] lg:w-[120rem] md:w-[56rem] w-[37rem] mx-auto ">
       <div className="lg:hidden flex flex-col 2xl:ml-[13.6rem] lg:ml-[12rem] md:w-[40rem] w-[32rem] mr-auto">
-        <h1 className="2xl:text-[4.8rem] lg:text-[3.2rem] text-[2.4rem] font-normal 2xl:w-[47rem] lg:w-[32rem] md:w-[24rem] w-[20rem]" data-aos="fade-up">
+        <h1 className="2xl:text-[4.8rem] lg:text-[3.2rem] text-[2.8rem] font-normal 2xl:w-[47rem] lg:w-[32rem] md:w-[24rem] w-[24rem]" data-aos="fade-up">
           Build <span className="text-[#808080]">your own </span>Subscription
           Plans
         </h1>
