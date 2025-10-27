@@ -10,6 +10,7 @@ interface SubscriptionCardProps {
   buttonText: string;
   buttonLink: string;
   size: "small" | "large";
+  className?: string;
 }
 
 const SubscriptionCard = ({
@@ -20,6 +21,7 @@ const SubscriptionCard = ({
   buttonText,
   buttonLink,
   size,
+  className,
 }: SubscriptionCardProps) => {
   return (
     <div
@@ -27,7 +29,7 @@ const SubscriptionCard = ({
         size === "small"
           ? "md:w-[47rem] w-[37rem] text-[var(--foreground)]"
           : "text-black"
-      }`}
+      } ${className}`}
     >
       <span className="2xl:text-[6.4rem] lg:text-[4.8rem] md:text-[3.2rem] text-[3.6rem] font-medium ">
         {planName}

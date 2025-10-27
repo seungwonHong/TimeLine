@@ -12,9 +12,9 @@ const TabButton = ({ tabs, onChange = () => {}, type }: Props) => {
 
   return (
     <div
-      className={`flex flex-row items-center justify-center p-[0.4rem] gap-[0.4rem] rounded-[0.8rem] ${
+      className={`flex flex-row items-center justify-center md:p-[0.4rem] p-[0.2rem] gap-[0.4rem] rounded-[0.8rem] ${
         type === "landing"
-          ? "md:h-[4.8rem] h-[4rem] bg-[var(--landing-tab-button)]"
+          ? "md:h-[4.8rem] h-[4.6rem] bg-[var(--landing-tab-button)]"
           : ""
       }`}
     >

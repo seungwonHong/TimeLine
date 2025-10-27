@@ -44,6 +44,7 @@ const Plan = () => {
             buttonText="Get Started"
             buttonLink="/"
             size="small"
+            className="md:mt-[2.4rem] mt-[1.6rem]"
           />
         )}
         {activeTab === "Pro" && (
