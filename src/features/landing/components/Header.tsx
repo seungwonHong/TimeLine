@@ -9,6 +9,7 @@ const Header = () => {
   const [clicked, setClicked] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const isManualScroll = useRef(false);
+  const [isMobile, setIsMobile] = useState(false);
   const sections = ["section-1", "section-2", "section-3", "section-4"];
 
   useSectionObserver({ isManualScroll, setClicked, sections });
@@ -33,6 +34,15 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <div className="sticky top-[2rem] 2xl:mt-[4rem] lg:mt-[3rem] mt-[2rem] flex flex-row items-center justify-between 2xl:p-[1.6rem] lg:p-[0.6rem] p-[0.4rem] 2xl:rounded-[2.4rem] lg:rounded-[1.2rem] rounded-[1.2rem] mx-auto 2xl:w-[1067px] lg:w-[704px] w-[343px] md:w-[600px] bg-[var(--header-background)] z-50 backdrop-blur-sm">
       {/* 화면상 맨 위면 글씨였다가 스크롤하면 로고로 바뀌도록 설계 -> 로고는 등장할 때 살짝 회전*/}
@@ -41,36 +51,56 @@ const Header = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key="logo"
-            initial={{ rotate: 30, opacity: 0 }}
-            animate={{ rotate: 0, opacity: 1 }}
-            exit={{ rotate: -30, opacity: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 200,
-              damping: 20,
-              duration: 0.6,
-            }}
+            initial={isMobile ? {} : { rotate: 30, opacity: 0 }}
+            animate={isMobile ? {} : { rotate: 0, opacity: 1 }}
+            exit={isMobile ? {} : { rotate: -30, opacity: 0 }}
+            transition={
+              isMobile
+                ? {}
+                : {
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 20,
+                    duration: 0.6,
+                  }
+            }
           >
             <img
               src="/icons/LogoBlack.png"
-              alt="logo"
+              alt="logo light"
               className="2xl:w-[56px] 2xl:h-[56px] lg:w-[48px] lg:h-[48px] md:w-[36px] md:h-[36px] w-[32px] h-[32px] dark:hidden block"
             />
             <img
               src="/icons/LogoWhite.png"
-              alt="logo"
+              alt="logo dark"
               className="2xl:w-[56px] 2xl:h-[56px] lg:w-[48px] lg:h-[48px] md:w-[36px] md:h-[36px] w-[32px] h-[32px] dark:block hidden"
             />
           </motion.div>
         </AnimatePresence>
       ) : (
         // 맨 위일 때 텍스트
-        <span className="2xl:text-[2.4rem] lg:text-[2rem] md:text-[2rem] text-[1.6rem] font-medium">
-          TimeLine
-        </span>
+        <>
+          <span className="2xl:text-[2.4rem] lg:text-[2rem] md:text-[2rem] text-[1.6rem] font-medium md:block hidden">
+            TimeLine
+          </span>
+          {isMobile && (
+            <>
+              <img
+                src="/icons/LogoBlack.png"
+                alt="logo light"
+                className="2xl:w-[56px] 2xl:h-[56px] lg:w-[48px] lg:h-[48px] md:w-[36px] md:h-[36px] w-[32px] h-[32px] dark:hidden block"
+              />
+              <img
+                src="/icons/LogoWhite.png"
+                alt="logo dark"
+                className="2xl:w-[56px] 2xl:h-[56px] lg:w-[48px] lg:h-[48px] md:w-[36px] md:h-[36px] w-[32px] h-[32px] dark:block hidden"
+              />
+            </>
+          )}
+        </>
       )}
 
-      <div className="flex flex-row items-center justify-center 2xl:text-[2rem] lg:text-[1.4rem] text-[1rem] font-normal 2xl:gap-[2rem] lg:gap-[1.6rem] gap-[1.2rem] text-[var(--header-text)]">
+      <div className="flex flex-row items-center justify-center 2xl:text-[2rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1rem] font-normal 2xl:gap-[2rem] md:gap-[1.6rem] gap-[1.2rem] text-[var(--header-text)]">
         <span
           className={`cursor-pointer hover:text-[var(--foreground)] transition-all duration-300 ${
             clicked === 1 ? "text-[var(--foreground)]" : ""
