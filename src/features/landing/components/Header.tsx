@@ -80,7 +80,7 @@ const Header = () => {
       ) : (
         // 맨 위일 때 텍스트
         <>
-          <span className="2xl:text-[2.4rem] lg:text-[2rem] md:text-[2rem] text-[1.6rem] font-medium md:block hidden">
+          <span className="2xl:text-[2.4rem] lg:text-[2rem] md:text-[2rem] text-[1.6rem] font-normal md:block hidden">
             TimeLine
           </span>
           {isMobile && (
