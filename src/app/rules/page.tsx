@@ -2,7 +2,15 @@ import FooterHeader from "@/features/landing/components/FooterHeader";
 import React from "react";
 import Link from "next/link";
 import Footer from "@/features/landing/components/Footer";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "TimeLine - Rules",
+  description: "Follow the rules to keep TimeLine safe and high‑quality. Violations may lead to removal or suspension—even without a report.",
+  alternates: {
+    canonical: "https://www.timeline-io.com/rules",
+  },
+};
 const Rules = () => {
   return (
     <>

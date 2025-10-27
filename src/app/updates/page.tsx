@@ -3,7 +3,15 @@ import React from "react";
 import Link from "next/link";
 import Footer from "@/features/landing/components/Footer";
 import UpdateComponent from "@/features/landing/components/UpdateComponent";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "TimeLine - Updates",
+  description: "We publish new features, improvements, deprecations, and policy changes here. Each update includes a brief summary, the effective date, and links to learn more or adjust settings.",
+  alternates: {
+    canonical: "https://www.timeline-io.com/updates",
+  },
+};
 const Updates = () => {
   return (
     <>

@@ -5,7 +5,7 @@ import "@/shared/styles/hideScrollbar.css";
 
 const Fields = () => {
   return (
-    <div
+    <section
       id="section-1"
       className="flex flex-col items-center justify-center 2xl:mt-[20rem] lg:mt-[14rem] md:mt-[10rem] mt-[12rem]"
     >
@@ -107,7 +107,7 @@ const Fields = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

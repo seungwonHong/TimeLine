@@ -2,8 +2,16 @@
 import React from "react";
 import FooterHeader from "@/features/landing/components/FooterHeader";
 import Footer from "@/features/landing/components/Footer";
-import Link from "next/link";
+import { Metadata } from "next";
 import "@/features/landing/styles/footer.css";
+
+export const metadata: Metadata = {
+  title: "TimeLine - Terms of Use",
+  description: "TimeLine's terms of use govern your access to and use of our platform.",
+  alternates: {
+    canonical: "https://www.timeline-io.com/termsofuse",
+  },
+};
 
 const TermsOfUse = () => {
   return (

@@ -3,6 +3,15 @@ import React from "react";
 import Footer from "@/features/landing/components/Footer";
 import FooterHeader from "@/features/landing/components/FooterHeader";
 import { SendHorizontal } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "TimeLine - Help",
+  description: "Find help, report bugs, and request features on TimeLine.",
+  alternates: {
+    canonical: "https://www.timeline-io.com/help",
+  },
+};
 
 const Help = () => {
   return (
