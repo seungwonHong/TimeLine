@@ -6,15 +6,6 @@ import Navigation from "@/features/landing/components/Navigation";
 import Link from "next/link";
 import "@/features/landing/styles/footer.css";
 import { useSectionObserver } from "@/features/landing/hooks/useSectionObserver";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "TimeLine - Privacy Policy",
-  description: "TimeLine's privacy policy explains how we collect, use, store, delete, and safeguard your information.",
-  alternates: {
-    canonical: "https://www.timeline-io.com/privacy",
-  },
-};
 
 const Privacy = () => {
   const isManualScroll = useRef(false);
