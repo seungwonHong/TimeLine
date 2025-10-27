@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import "@/shared/styles/hideScrollbar.css";
 
 const Fields = () => {
   return (
@@ -18,7 +19,7 @@ const Fields = () => {
       </div>
 
       <div
-        className="flex flex-row items-center overflow-x-auto 2xl:gap-[2.4rem] lg:gap-[2rem] md:gap-[1.6rem] gap-[1.2rem] 2xl:mt-[6.4rem] lg:mt-[4rem] md:mt-[2.4rem] mt-[1.6rem]"
+        className="flex flex-row items-center hide-scrollbar 2xl:gap-[2.4rem] lg:gap-[2rem] md:gap-[1.6rem] gap-[1.2rem] 2xl:mt-[6.4rem] lg:mt-[4rem] md:mt-[2.4rem] mt-[1.6rem]"
         data-aos="fade-up"
       >
         <div className="flex flex-col shrink-0">
