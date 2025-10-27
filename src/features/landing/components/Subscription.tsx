@@ -14,7 +14,7 @@ const Subscription = () => {
           experiences to your subscribers and grow a sustainable income stream.
         </span>
       </div>
-      <div className="bg-white 2xl:rounded-[3.2rem] lg:rounded-[2.4rem] md:rounded-[1.6rem] rounded-[1.2rem] lg:mt-0 md:mt-[4rem] mt-[2rem]" data-aos="fade-up">
+      <div className="bg-white 2xl:rounded-[3.2rem] lg:rounded-[2.4rem] md:rounded-[1.6rem] rounded-[1.2rem] lg:mt-0 md:mt-[4rem] mt-[2rem] overflow-hidden" data-aos="fade-up">
         <img
           src="/images/Subscription.png"
           alt="Personal Subscription plan"
