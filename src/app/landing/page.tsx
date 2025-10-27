@@ -13,7 +13,7 @@ import "@/features/landing/styles/fadeDownAnimation.css";
 
 const LandingPage = () => {
   return (
-    <div className="2xl:pb-[15rem] lg:pb-[10rem] pb-[6rem] ">
+    <div className="2xl:pb-[15rem] lg:pb-[10rem] pb-[6rem] flex flex-col items-center justify-center md:w-full w-screen overflow-x-hidden">
       <Header />
 
       <div className="text-center 2xl:w-[99rem] lg:w-[80rem] md:w-[56rem] w-[34rem] mx-auto 2xl:mt-[12rem] lg:mt-[8rem] mt-[4rem]">

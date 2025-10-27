@@ -44,7 +44,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="sticky top-[2rem] 2xl:mt-[4rem] lg:mt-[3rem] mt-[2rem] flex flex-row items-center justify-between 2xl:p-[1.6rem] lg:p-[0.6rem] p-[0.4rem] 2xl:rounded-[2.4rem] lg:rounded-[1.2rem] rounded-[1.2rem] mx-auto 2xl:w-[1067px] lg:w-[704px] w-[343px] md:w-[600px] bg-[var(--header-background)] z-50 backdrop-blur-sm">
+    <div className="sticky top-[2rem] 2xl:mt-[4rem] lg:mt-[3rem] mt-[2rem] flex flex-row items-center justify-between 2xl:p-[1.6rem] lg:p-[0.6rem] md:p-[0.4rem] p-[0.6rem] 2xl:rounded-[2.4rem] lg:rounded-[1.2rem] rounded-[1.2rem] mx-auto 2xl:w-[1067px] lg:w-[704px] w-[343px] md:w-[600px] bg-[var(--header-background)] z-50 backdrop-blur-sm">
       {/* 화면상 맨 위면 글씨였다가 스크롤하면 로고로 바뀌도록 설계 -> 로고는 등장할 때 살짝 회전*/}
       {isScrolled ? (
         // 스크롤 시 로고 (회전 애니메이션)
@@ -145,7 +145,7 @@ const Header = () => {
 
       <Link
         href="/login"
-        className="bg-[var(--login-button)] 2xl:px-[3.2rem] 2xl:py-[1.2rem] lg:px-[2.8rem] lg:py-[1rem] px-[1.6rem] py-[0.8rem] 2xl:rounded-[1.2rem] lg:rounded-[0.8rem] rounded-[0.6rem] text-[1rem] font-normal hover:bg-[var(--login-button-hover)] transition-all duration-300 ease-in-out"
+        className="bg-[var(--login-button)] 2xl:px-[3.2rem] 2xl:py-[1.2rem] lg:px-[2.8rem] lg:py-[1rem] px-[1.6rem] py-[0.8rem] 2xl:rounded-[1.2rem] lg:rounded-[0.8rem] rounded-[0.8rem] text-[1rem] font-normal hover:bg-[var(--login-button-hover)] transition-all duration-300 ease-in-out"
       >
         <span className="2xl:text-[2rem] lg:text-[1.6rem] text-[1.2rem] font-medium">
           Login
