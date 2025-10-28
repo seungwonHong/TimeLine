@@ -16,7 +16,7 @@ const LandingPage = () => {
     <div className="2xl:pb-[15rem] lg:pb-[10rem] pb-[6rem] flex flex-col">
       <Header />
 
-      <div className="text-center 2xl:w-[99rem] lg:w-[80rem] md:w-[56rem] w-[34rem] mx-auto 2xl:mt-[12rem] lg:mt-[8rem] mt-[4rem]">
+      <div id="section-0" className="text-center 2xl:w-[99rem] lg:w-[80rem] md:w-[56rem] w-[34rem] mx-auto 2xl:mt-[12rem] lg:mt-[8rem] mt-[4rem]">
         <h1 className="2xl:text-[6.4rem] lg:text-[4.8rem] text-[3.2rem] font-medium fade-down-custom">
           The best platform to communicate with developers
         </h1>

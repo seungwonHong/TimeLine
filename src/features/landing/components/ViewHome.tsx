@@ -13,7 +13,7 @@ const ViewHome = () => {
       <img
         src="/images/ViewHomeLight.png"
         alt="ViewHome Light"
-        className="2xl:w-[160rem] 2xl:h-[103rem] lg:w-[120rem] lg:h-[80rem] md:w-[72rem] md:h-[46rem] w-[36rem] h-[24rem] mx-auto dark:hidden block"
+        className="2xl:w-[160rem] 2xl:h-[103rem] lg:w-[120rem] lg:h-[80rem] md:w-[72rem] md:h-[46rem] w-[38rem] h-[24rem] mx-auto dark:hidden block"
       />
     </div>
   );

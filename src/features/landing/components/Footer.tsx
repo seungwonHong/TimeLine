@@ -35,7 +35,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="flex flex-col md:gap-[0.4rem] gap-[0.6rem]">
-          <span className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.2rem] font-normal ">
+          <span className="2xl:text-[2rem] lg:text-[1.4rem] text-[1.6rem] font-normal ">
             Resources
           </span>
           <Link

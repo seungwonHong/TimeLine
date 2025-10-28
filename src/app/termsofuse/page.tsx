@@ -19,10 +19,10 @@ const TermsOfUse = () => {
         <FooterHeader />
 
         <div className="flex flex-col items-center justify-center w-full">
-          <h1 className="2xl:mt-[16rem] lg:mt-[12rem] md:mt-[10rem] mt-[8rem] 2xl:text-[6.4rem] lg:text-[4.8rem] md:text-[3.2rem] text-[2.4rem] font-normal">
+          <h1 className="2xl:mt-[16rem] lg:mt-[12rem] md:mt-[10rem] mt-[8rem] 2xl:text-[6.4rem] lg:text-[4.8rem] md:text-[3.2rem] text-[3.6rem] font-normal">
             Terms of Use
           </h1>
-          <h2 className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1rem] font-normal  2xl:w-[120rem] lg:w-[80rem] md:w-[64rem] w-[36rem] mx-auto text-center">
+          <h2 className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.4rem] font-normal  2xl:w-[120rem] lg:w-[80rem] md:w-[64rem] w-[36rem] mx-auto text-center">
             By using TimeLine, you agree to these Terms of Use, which govern
             your access to and use of our platform. These terms outline your
             rights, responsibilities, and limitations while using our services.
