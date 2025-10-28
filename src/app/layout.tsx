@@ -3,6 +3,7 @@ import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import AOSProvider from "@/features/landing/components/AOSProvider";
 import "aos/dist/aos.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -108,6 +109,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.variable} ${robotoMono.variable} antialiased`}>
         <AOSProvider>{children}</AOSProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
