@@ -1018,7 +1018,7 @@ const Privacy = () => {
                 stiffness: 300,
                 damping: 25,
               }}
-              className="bg-[var(--privacy-policy-hover-background)] shadow-lg p-[1rem] rounded-[1.2rem] z-50 fixed bottom-[6.4rem] right-[2rem] backdrop-blur-sm"
+              className="bg-[var(--privacy-policy-hover-background)] shadow-lg p-[2rem] rounded-[1.2rem] z-50 fixed bottom-[8rem] right-[2rem] backdrop-blur-sm"
             >
               <Navigation
                 navigationText={[
@@ -1035,7 +1035,7 @@ const Privacy = () => {
                 onItemClick={handleNavClick}
                 clicked={clicked}
                 setIsClicked={setIsClicked}
-                className="md:hidden block"
+                className="md:hidden block w-full"
                 onClose={() => setIsOpened(false)}
               />
             </motion.div>
@@ -1044,10 +1044,10 @@ const Privacy = () => {
 
         {/* 모바일 용 버튼(사이드 네비게이션바 열기) */}
         <div
-          className="md:hidden block fixed bottom-[2rem] right-[2rem] z-50 rounded-full bg-[var(--privacy-policy-hover-background)] shadow-lg p-[1rem] cursor-pointer"
+          className="md:hidden block fixed bottom-[2rem] right-[2rem] z-50 rounded-full bg-[var(--privacy-policy-hover-background)] shadow-lg p-[1rem] cursor-pointer w-[4.8rem] h-[4.8rem] items-center justify-center flex"
           onClick={() => setIsOpened(!isOpened)}
         >
-          <List className="w-6 h-6" />
+          <List className="w-10 h-10" />
         </div>
       </div>
 
