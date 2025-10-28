@@ -19,7 +19,7 @@ const Navigation = ({
   onClose,
 }: Props) => {
   return (
-    <div className={`sticky 2xl:top-[12rem] lg:top-[10rem] top-[8rem] flex flex-col 2xl:px-[2.4rem] lg:px-[1.6rem] px-[0.8rem] 2xl:gap-[2rem] lg:gap-[1.6rem] gap-[1.2rem] 2xl:ml-[10rem] lg:ml-[6rem] md:ml-[4rem] ${className}`}>
+    <div className={`sticky 2xl:top-[12rem] lg:top-[10rem] top-[8rem] flex flex-col 2xl:px-[2.4rem] lg:px-[1.6rem] px-[0.8rem] 2xl:gap-[2rem] lg:gap-[1.6rem] md:gap-[1.4rem] gap-[1.6rem] 2xl:ml-[10rem] lg:ml-[6rem] md:ml-[4rem] ${className}`}>
       {navigationText.map((text, index) => (
         <div
           key={index}
@@ -41,7 +41,7 @@ const Navigation = ({
                 : "group-hover:bg-[var(--privacy-policy-navigation-text-hover)]"
             } transition-all duration-300 ease-in-out`}
           ></div>
-          <span className="lg:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal">
+          <span className="lg:text-[1.6rem] md:text-[1.4rem] text-[1.2rem] font-normal">
             {text}
           </span>
         </div>

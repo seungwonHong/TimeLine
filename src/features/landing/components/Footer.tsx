@@ -50,7 +50,7 @@ const Footer = () => {
             Connect
           </span>
           <Link
-            href="/"
+            href="https://x.com/TimeLine_io"
             className="2xl:text-[2rem] md:text-[1.4rem] text-[1.6rem] font-normal text-[#808080] hover:text-foreground transition-colors duration-300 ease-in-out w-fit"
           >
             X
