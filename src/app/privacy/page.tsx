@@ -6,10 +6,13 @@ import Navigation from "@/features/landing/components/Navigation";
 import Link from "next/link";
 import "@/features/landing/styles/footer.css";
 import { useSectionObserver } from "@/features/landing/hooks/useSectionObserver";
+import { List } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Privacy = () => {
   const isManualScroll = useRef(false);
   const [clicked, setIsClicked] = useState(0);
+  const [isOpened, setIsOpened] = useState(false);
   const ids = [
     "privacy-1",
     "privacy-2",
@@ -36,14 +39,17 @@ const Privacy = () => {
 
   return (
     <>
-      <div className="flex flex-col 2xl:px-[16rem] lg:px-[12rem] md:px-[3.2rem] px-[1.6rem] w-full 2xl:pb-[15rem] lg:pb-[10rem] pb-[6rem]">
+      <div
+        className="relative flex flex-col 2xl:px-[16rem] lg:px-[12rem] md:px-[3.2rem] px-[1.6rem] w-full 2xl:pb-[15rem] lg:pb-[10rem] pb-[6rem]"
+        onClick={() => isOpened && setIsOpened(false)}
+      >
         <FooterHeader />
 
         <div className="flex flex-col items-center justify-center w-full">
-          <h1 className="2xl:mt-[16rem] lg:mt-[12rem] md:mt-[10rem] mt-[8rem] 2xl:text-[6.4rem] lg:text-[4.8rem] md:text-[3.2rem] text-[2.4rem] font-normal">
+          <h1 className="2xl:mt-[16rem] lg:mt-[12rem] md:mt-[10rem] mt-[8rem] 2xl:text-[6.4rem] lg:text-[4.8rem] md:text-[3.2rem] text-[3.6rem] font-normal">
             Privacy Policy
           </h1>
-          <h2 className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1rem] font-normal text-center 2xl:w-[120rem] lg:w-[80rem] md:w-[64rem] w-[36rem] mx-auto">
+          <h2 className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.4rem] font-normal text-center 2xl:w-[120rem] lg:w-[80rem] md:w-[64rem] w-[36rem] mx-auto">
             TimeLine protects your personal data. This policy clearly explains
             how we collect, use, store, delete, and safeguard your information,
             and outlines your rights.
@@ -65,6 +71,7 @@ const Privacy = () => {
               onItemClick={handleNavClick}
               clicked={clicked}
               setIsClicked={setIsClicked}
+              className="md:block hidden"
             />
 
             <div className="flex flex-col 2xl:w-[80rem] lg:w-[64rem] md:w-[48rem] w-[32rem] 2xl:mr-[10rem] lg:mr-[6rem] md:mr-[4rem]">
@@ -997,6 +1004,50 @@ const Privacy = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* 모바일 용 사이드 네비게이션바 */}
+        {isOpened && (
+          <AnimatePresence>
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0, y: 20 }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 25,
+              }}
+              className="bg-[var(--privacy-policy-hover-background)] shadow-lg p-[1rem] rounded-[1.2rem] z-50 fixed bottom-[6.4rem] right-[2rem] backdrop-blur-sm"
+            >
+              <Navigation
+                navigationText={[
+                  "Privacy Policy Intro",
+                  "Data Collection",
+                  "Data Use",
+                  "Data Storage",
+                  "Data Deletion",
+                  "Data Transfers",
+                  "Data Security",
+                  "Children",
+                  "Your Rights and Choices",
+                ]}
+                onItemClick={handleNavClick}
+                clicked={clicked}
+                setIsClicked={setIsClicked}
+                className="md:hidden block"
+                onClose={() => setIsOpened(false)}
+              />
+            </motion.div>
+          </AnimatePresence>
+        )}
+
+        {/* 모바일 용 버튼(사이드 네비게이션바 열기) */}
+        <div
+          className="md:hidden block fixed bottom-[2rem] right-[2rem] z-50 rounded-full bg-[var(--privacy-policy-hover-background)] shadow-lg p-[1rem] cursor-pointer"
+          onClick={() => setIsOpened(!isOpened)}
+        >
+          <List className="w-6 h-6" />
         </div>
       </div>
 

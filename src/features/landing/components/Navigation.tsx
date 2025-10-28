@@ -6,6 +6,8 @@ interface Props {
   onItemClick?: (index: number) => void;
   clicked: number;
   setIsClicked: (index: number) => void;
+  className?: string;
+  onClose?: () => void;
 }
 
 const Navigation = ({
@@ -13,15 +15,18 @@ const Navigation = ({
   onItemClick,
   clicked,
   setIsClicked,
+  className,
+  onClose,
 }: Props) => {
   return (
-    <div className="sticky 2xl:top-[12rem] lg:top-[10rem] top-[8rem] flex flex-col 2xl:px-[2.4rem] lg:px-[1.6rem] px-[0.8rem] 2xl:gap-[2rem] lg:gap-[1.6rem] gap-[1.2rem] 2xl:ml-[10rem] lg:ml-[6rem] md:ml-[4rem]">
+    <div className={`sticky 2xl:top-[12rem] lg:top-[10rem] top-[8rem] flex flex-col 2xl:px-[2.4rem] lg:px-[1.6rem] px-[0.8rem] 2xl:gap-[2rem] lg:gap-[1.6rem] gap-[1.2rem] 2xl:ml-[10rem] lg:ml-[6rem] md:ml-[4rem] ${className}`}>
       {navigationText.map((text, index) => (
         <div
           key={index}
           onClick={() => {
             onItemClick?.(index);
             setIsClicked(index + 1);
+            onClose?.();
           }}
           className={`group flex flex-row items-center 2xl:gap-[0.8rem] lg:gap-[0.6rem] gap-[0.4rem] cursor-pointer text-[var(--privacy-policy-navigation-text)]  ${
             index + 1 === clicked

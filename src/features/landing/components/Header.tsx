@@ -9,8 +9,7 @@ const Header = () => {
   const [clicked, setClicked] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const isManualScroll = useRef(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const sections = ["section-1", "section-2", "section-3", "section-4"];
+  const sections = ["section-0", "section-1", "section-2", "section-3", "section-4"];
 
   useSectionObserver({ isManualScroll, setClicked, sections });
 
@@ -32,15 +31,6 @@ const Header = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   return (
