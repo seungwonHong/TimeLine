@@ -71,7 +71,7 @@ const Privacy = () => {
               onItemClick={handleNavClick}
               clicked={clicked}
               setIsClicked={setIsClicked}
-              className="md:block hidden"
+              className="hidden md:flex flex-col "
             />
 
             <div className="flex flex-col 2xl:w-[80rem] lg:w-[64rem] md:w-[48rem] w-[32rem] 2xl:mr-[10rem] lg:mr-[6rem] md:mr-[4rem]">
@@ -1035,7 +1035,7 @@ const Privacy = () => {
                 onItemClick={handleNavClick}
                 clicked={clicked}
                 setIsClicked={setIsClicked}
-                className="md:hidden block w-full"
+                className="md:hidden flex flex-col"
                 onClose={() => setIsOpened(false)}
               />
             </motion.div>
