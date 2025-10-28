@@ -1044,10 +1044,10 @@ const Privacy = () => {
 
         {/* 모바일 용 버튼(사이드 네비게이션바 열기) */}
         <div
-          className="md:hidden block fixed bottom-[2rem] right-[2rem] z-50 rounded-full bg-[var(--privacy-policy-hover-background)] shadow-lg p-[1rem] cursor-pointer w-[4.8rem] h-[4.8rem] items-center justify-center flex"
+          className="md:hidden flex fixed bottom-[2rem] right-[2rem] z-50 rounded-full bg-[var(--privacy-policy-hover-background)] shadow-lg p-[1rem] cursor-pointer w-[4.8rem] h-[4.8rem] items-center justify-center"
           onClick={() => setIsOpened(!isOpened)}
         >
-          <List className="w-10 h-10" />
+          <List className="w-[4rem] h-[4rem]" />
         </div>
       </div>
 
