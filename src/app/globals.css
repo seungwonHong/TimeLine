@@ -18,6 +18,13 @@
   --privacy-policy-navigation-text-selected: #000000;
   --privacy-policy-navigation-text-hover: #000000;
   --privacy-policy-hover-background: #f8f8f8;
+
+  /* input & text area */
+  --input-label: #676767;
+  --input-bg: #ececec;
+
+  /* primary color */
+  --primary-color: #6299FF;
 }
 
 @theme inline {
@@ -46,6 +53,9 @@
   --color-privacy-policy-hover-background: var(
     --privacy-policy-hover-background
   );
+  --color-input-bg: var(--input-bg);
+  --color-input-label: var(--input-label);
+  --color-primary-color: var(--primary-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,6 +77,13 @@
     --privacy-policy-navigation-text-selected: #ffffff;
     --privacy-policy-navigation-text-hover: #ffffff;
     --privacy-policy-hover-background: #25252599;
+
+    /* input & text area */
+    --input-label: #595959;
+    --input-bg: #1F1F1F;
+
+    /* primary color */
+    --primary-color: #6299FF;
   }
 }
 

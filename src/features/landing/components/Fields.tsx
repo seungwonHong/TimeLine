@@ -50,7 +50,7 @@ const Fields = () => {
             className="aspect-square 2xl:w-[51.7rem] lg:w-[42.8rem] md:w-[37.7rem] w-[25.8rem]"
           />
           <span className="2xl:text-[3.2rem] lg:text-[2.4rem] md:text-[2rem] text-[1.6rem] font-normal 2xl:mt-[2rem] lg:mt-[1.6rem] md:mt-[1.2rem] mt-[0.8rem]">
-            Video Creator
+            Video Creators
           </span>
           <Link
             href="/"
@@ -71,7 +71,7 @@ const Fields = () => {
             className="aspect-square 2xl:w-[51.7rem] lg:w-[42.8rem] md:w-[37.7rem] w-[25.8rem]"
           />
           <span className="2xl:text-[3.2rem] lg:text-[2.4rem] md:text-[2rem] text-[1.6rem] font-normal 2xl:mt-[2rem] lg:mt-[1.6rem] md:mt-[1.2rem] mt-[0.8rem]">
-            Music Creator
+            Audio Creators
           </span>
           <Link
             href="/"
