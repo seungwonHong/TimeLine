@@ -19,15 +19,15 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TimeLine - The Best Community for Developers",
+  title: "TimeLine-io - The Best Community for Developers",
   description:
-    "TimeLine is the best platform for various kind of developers. You can post your ideas, create a topics, recruit people for projects.",
+    "TimeLine-io is the best platform for various kind of developers. You can post your ideas, create a topics, recruit people for projects.",
   keywords: [
-    "TimeLine",
+    "TimeLine-io",
     "Timeline",
-    "Timeline IO",
-    "Timeline IO Official",
-    "Timeline IO Official Website",
+    "Timeline-io",
+    "Timeline-io Official",
+    "Timeline-io Official Website",
     "developer platform",
     "developer community",
     "programmer community",
@@ -36,35 +36,35 @@ export const metadata: Metadata = {
     "tech community",
     "topic creation",
   ],
-  authors: [{ name: "TimeLine Team" }],
-  creator: "TimeLine",
-  publisher: "TimeLine",
+  authors: [{ name: "TimeLine-io Team" }],
+  creator: "TimeLine-io",
+  publisher: "TimeLine-io",
   metadataBase: new URL("https://www.timeline-io.com/"),
   category: "technology",
-  applicationName: "TimeLine - The Best Community for Developers",
+  applicationName: "TimeLine-io - The Best Community for Developers",
 
   openGraph: {
     type: "website",
-    title: "TimeLine - The Best Community for Developers",
+    title: "TimeLine-io - The Best Community for Developers",
     description:
-      "TimeLine is the best platform for various kind of developers. You can post your ideas, create a topics, recruit people for projects.",
+      "TimeLine-io is the best platform for various kind of developers. You can post your ideas, create a topics, recruit people for projects.",
     url: "https://www.timeline-io.com/",
-    siteName: "TimeLine - The Best Community for Developers",
+    siteName: "TimeLine-io - The Best Community for Developers",
     locale: "en_US",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "TimeLine - The Best Community for Developers",
+        alt: "TimeLine-io - The Best Community for Developers",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TimeLine - The Best Community for Developers",
+    title: "TimeLine-io - The Best Community for Developers",
     description:
-      "TimeLine is the best platform for various kind of developers. You can post your ideas, create a topics, recruit people for projects.",
+      "TimeLine-io is the best platform for various kind of developers. You can post your ideas, create a topics, recruit people for projects.",
     images: ["/images/og-image.png"],
   },
   robots: {
@@ -86,18 +86,20 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icons/favicon.png",
+        url: "/favicon.png",
         sizes: "48x48",
         type: "image/png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icons/faviconDark.png",
+        url: "/faviconDark.png",
         sizes: "48x48",
         type: "image/png",
         media: "(prefers-color-scheme: dark)",
       },
     ],
+    shortcut: "/favicon.png", // 라이트 모드용 (기본값)
+    apple: "/favicon.png", // 라이트 모드용 (기본값)
   },
 };
 

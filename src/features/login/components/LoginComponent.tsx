@@ -17,7 +17,6 @@ const loginSchema = z.object({
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 const LoginComponent = () => {
-
   const {
     register,
     handleSubmit,

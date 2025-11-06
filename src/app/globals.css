@@ -3,17 +3,27 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* header */
   --header-background: #f4f4f480;
   --header-text: #808080;
+
+  /* login button */
   --login-button: #cbcbcb80;
   --login-button-hover: #b0afaf80;
+
+  /* button */
   --button-bg: #000000;
   --button-text: #ffffff;
   --button-hover: #3c3c3c;
   --button-hover-transparent: #e8e8e8;
   --landing-tab-button: #f8f8f8;
   --landing-tab-button-active: #ffffff;
+
+  /* help card */
   --help-card-background: #f8f8f8;
+
+  /* privacy policy */
   --privacy-policy-navigation-text: #cccccc;
   --privacy-policy-navigation-text-selected: #000000;
   --privacy-policy-navigation-text-hover: #000000;
@@ -25,6 +35,18 @@
 
   /* primary color */
   --primary-color: #6299FF;
+
+  /* modal */
+  --modal-background: #f6f6f6;
+
+  /* grid box(interest 선택용) */
+  --grid-box-bg: #EDEDED;
+
+  /* search icon */
+  --search-icon: #CDCDCD;
+
+  /* user card */
+  --user-card-bg: #F5F5F5;
 }
 
 @theme inline {
@@ -56,6 +78,10 @@
   --color-input-bg: var(--input-bg);
   --color-input-label: var(--input-label);
   --color-primary-color: var(--primary-color);
+  --color-modal-background: var(--modal-background);
+  --color-grid-box-bg: var(--grid-box-bg);
+  --color-search-icon: var(--search-icon);
+  --color-user-card-bg: var(--user-card-bg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -84,6 +110,18 @@
 
     /* primary color */
     --primary-color: #6299FF;
+
+    /* modal */
+    --modal-background: #101010;
+
+    /* grid box(interest 선택용) */
+    --grid-box-bg: #1a1a1a;
+
+    /* search icon */
+    --search-icon: #343434;
+
+    /* user card */
+    --user-card-bg: #1a1a1a;
   }
 }
 
@@ -101,4 +139,26 @@ body {
   color: var(--foreground);
   font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+}
+
+/* 스크롤은 되지만, 스크롤바는 안 보이게 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* globals.css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }
