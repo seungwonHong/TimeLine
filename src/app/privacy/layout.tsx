@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TimeLine - Privacy Policy",
+  title: "TimeLine-io - Privacy Policy",
   description:
-    "TimeLine's privacy policy explains how we collect, use, store, delete, and safeguard your information.",
+    "TimeLine-io's privacy policy explains how we collect, use, store, delete, and safeguard your information.",
   alternates: {
     canonical: "https://www.timeline-io.com/privacy",
   },

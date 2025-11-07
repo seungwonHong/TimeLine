@@ -50,7 +50,7 @@ const Privacy = () => {
             Privacy Policy
           </h1>
           <h2 className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.4rem] font-normal text-center 2xl:w-[120rem] lg:w-[80rem] md:w-[64rem] w-[36rem] mx-auto">
-            TimeLine protects your personal data. This policy clearly explains
+            TimeLine-io protects your personal data. This policy clearly explains
             how we collect, use, store, delete, and safeguard your information,
             and outlines your rights.
           </h2>
@@ -81,30 +81,30 @@ const Privacy = () => {
                   Privacy Policy Intro
                 </h3>
                 <p className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal">
-                  At TimeLine, we take your privacy seriously and built our
+                  At TimeLine-io, we take your privacy seriously and built our
                   platform with privacy in mind. This Privacy Policy explains
-                  how we handle personal data. By using or accessing TimeLine,
+                  how we handle personal data. By using or accessing TimeLine-io,
                   you agree to the practices and policies described below and
                   allow us to collect, use, and share your information as
                   outlined in this Policy. This Privacy Policy applies to your
-                  use of TimeLine and is incorporated into TimeLine’s{" "}
+                  use of TimeLine-io and is incorporated into TimeLine-io’s{" "}
                   <Link href="/termsofuse" className="text-[#6299FF]">
                     Terms of Use
                   </Link>
                   . Any capitalized terms not defined here have the meanings
                   given in the Terms of Use. We collect only what’s necessary to
                   run the service: cookies to keep your login session active,
-                  and data used to provide personalized ads. We use cookies and
+                  and data used to provide personalized ads (you can opt out of personalized ads and cookies through your account settings at any time). We use cookies and
                   similar technologies for authentication and session
                   continuity, and we process limited ad-related data (like
                   interactions and standard device information) to make ads more
                   relevant. We don’t sell personal information, and we share
-                  data only with service providers who help us operate TimeLine
-                  under strict safeguards. We’re always improving TimeLine, so
+                  data only with service providers who help us operate TimeLine-io
+                  under strict safeguards. We’re always improving TimeLine-io, so
                   this Policy may change from time to time. If we make material
                   changes, we’ll notify you by posting a notice in the app or on
                   our website and/or sending an email. By continuing to use
-                  TimeLine after changes are posted, you agree to the updated
+                  TimeLine-io after changes are posted, you agree to the updated
                   Policy.
                 </p>
               </div>
@@ -119,9 +119,9 @@ const Privacy = () => {
                 </h3>
                 <div className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal">
                   <p>
-                    TimeLine collects only the information needed to operate,
+                    TimeLine-io collects only the information needed to operate,
                     secure, and improve the service, to keep you signed in, and
-                    to provide personalized ads and content recommendations.
+                    to provide personalized ads and content recommendations (you can opt out of personalized ads and cookies through your account settings at any time).
                   </p>
 
                   <br />
@@ -144,7 +144,7 @@ const Privacy = () => {
                     <li>
                       Cookies & similar technologies: cookies for authentication
                       and to keep your login session active; cookies/pixels for
-                      measuring engagement and supporting personalized ads.
+                      measuring engagement and supporting personalized ads (you can opt out of personalized ads and cookies through your account settings at any time).
                     </li>
                     <li>
                       Ad personalization data: limited signals (e.g.,
@@ -512,7 +512,7 @@ const Privacy = () => {
                 </h3>
                 <div className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal">
                   <p>
-                    TimeLine uses the Asia-Pacific (APAC) region as its main
+                    TimeLine-io uses the Asia-Pacific (APAC) region as its main
                     data-processing region to provide the service. Accordingly,
                     your personal data may be transferred, stored, and processed
                     within the Asia-Pacific region (e.g., Singapore, Japan, or
@@ -565,7 +565,7 @@ const Privacy = () => {
                     </li>
                     <li>
                       <strong>Vercel (deployment/hosting):</strong> We use
-                      Vercel to deploy and host TimeLine. In connection with
+                      Vercel to deploy and host TimeLine-io. In connection with
                       providing hosting and ensuring service reliability and
                       security, Vercel may process device and log data (e.g., IP
                       address, browser/device type, language, timestamps,
@@ -731,7 +731,7 @@ const Privacy = () => {
                 <div className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal">
                   <p>
                     This section explains the rights you have and the choices
-                    you can make when using TimeLine. We provide minimal, clear
+                    you can make when using TimeLine-io. We provide minimal, clear
                     options aligned with how the Service operates.
                   </p>
 
@@ -817,13 +817,12 @@ const Privacy = () => {
                       <strong>Mandatory consent at sign‑up:</strong> To create
                       an account, you must agree to our personal data collection
                       and use, including the use of cookies for
-                      authentication/session continuity and limited signals for
-                      advertising relevance as described in this Policy.
+                      authentication and session continuity as described in this Policy.
                     </li>
                     <li>
                       <strong>No opt‑out in settings:</strong> If you do not
-                      agree to these terms at sign‑up, you cannot create an
-                      account. After sign‑up, these consents cannot be changed
+                      agree to required consents at sign‑up, you cannot create an
+                      account. After sign‑up, these required consents cannot be changed
                       in{" "}
                       <a href="/settings" className="text-[#6299FF]">
                         settings
@@ -943,8 +942,7 @@ const Privacy = () => {
                     <li>
                       <strong>Personalized ads:</strong> We use limited signals
                       to make ads more relevant, as described in this Policy.
-                      There is no setting to opt out of personalized ads or
-                      cookies.
+                      You can opt out of personalized ads and cookies through your account settings at any time.
                     </li>
                     <li>
                       <strong>Non‑logged‑in use:</strong> For non‑logged‑in
@@ -996,7 +994,7 @@ const Privacy = () => {
                     <li>
                       <strong>Policy updates:</strong> If this Policy changes,
                       we will notify you via the app or website and/or email. By
-                      continuing to use TimeLine, you agree to the updated
+                      continuing to use TimeLine-io, you agree to the updated
                       Policy.
                     </li>
                   </ul>

@@ -5,7 +5,7 @@ import Footer from "@/features/landing/components/Footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TimeLine - Rules",
+  title: "TimeLine-io - Rules",
   description: "Follow the rules to keep TimeLine safe and high‑quality. Violations may lead to removal or suspension—even without a report.",
   alternates: {
     canonical: "https://www.timeline-io.com/rules",
@@ -40,7 +40,7 @@ const Rules = () => {
               </span>
             </div>
             <span className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.4rem] font-normal 2xl:w-[60rem] lg:w-[40rem] md:w-[32rem] w-[36rem] md:text-start text-center">
-              Follow the rules to keep TimeLine safe and high‑quality.
+              Follow the rules to keep TimeLine-io safe and high‑quality.
               Violations may lead to removal or suspension—even without a
               report.
             </span>
@@ -54,7 +54,7 @@ const Rules = () => {
               </h3>
               <div className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal">
                 <p>
-                  TimeLine is a developer community. Clear rules keep the
+                  TimeLine-io is a developer community. Clear rules keep the
                   platform safe, useful, and respectful. Following them protects
                   users' privacy and security, maintains content quality, and
                   ensures fair participation. Violations may lead to removal,
@@ -188,7 +188,7 @@ const Rules = () => {
                   <li>
                     Choose proper visibility (Everyone, Followers, Subscribers,
                     Followers & Subscribers); public posts may be discoverable
-                    on and off TimeLine.
+                    on and off TimeLine-io.
                   </li>
                   <li>
                     Extremely low‑quality, misleading, or off‑topic content may
