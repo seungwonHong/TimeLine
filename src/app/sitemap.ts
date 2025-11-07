@@ -3,12 +3,41 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.timeline-io.com/";
 
+  const mainPageIds = [
+    "home",
+    "notification",
+    "coding",
+    "videos",
+    "audio",
+    "design",
+  ];
+
+  const mainPages = mainPageIds.map((id) => ({
+    url: `${baseUrl}/main/${id}`,
+    lastModified: new Date(),
+    changeFrequency: "always" as const,
+    priority: 0.9,
+  }));
+
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
+    },
+    ...mainPages,
+    {
+      url: `${baseUrl}login`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}signup`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/help`,
