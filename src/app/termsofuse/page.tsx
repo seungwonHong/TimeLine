@@ -5,8 +5,9 @@ import { Metadata } from "next";
 import "@/features/landing/styles/footer.css";
 
 export const metadata: Metadata = {
-  title: "TimeLine - Terms of Use",
-  description: "TimeLine's terms of use govern your access to and use of our platform.",
+  title: "TimeLine-io - Terms of Use",
+  description:
+    "TimeLine-io's terms of use govern your access to and use of our platform.",
   alternates: {
     canonical: "https://www.timeline-io.com/termsofuse",
   },
@@ -23,7 +24,7 @@ const TermsOfUse = () => {
             Terms of Use
           </h1>
           <h2 className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.4rem] font-normal  2xl:w-[120rem] lg:w-[80rem] md:w-[64rem] w-[36rem] mx-auto text-center">
-            By using TimeLine, you agree to these Terms of Use, which govern
+            By using TimeLine-io, you agree to these Terms of Use, which govern
             your access to and use of our platform. These terms outline your
             rights, responsibilities, and limitations while using our services.
           </h2>
@@ -37,14 +38,14 @@ const TermsOfUse = () => {
                 </h3>
                 <div className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal ">
                   <p>
-                    By accessing or using TimeLine ("Service"), you agree to
+                    By accessing or using TimeLine-io ("Service"), you agree to
                     these Terms of Use ("Terms"). If you do not agree, do not
                     use the Service. These Terms incorporate the Privacy Policy
                     by reference. Capitalized terms not defined here have the
                     meanings provided in the Privacy Policy or other Service
                     documentation.
                     <br />
-                    TimeLine complies with the laws and regulations of the
+                    TimeLine-io complies with the laws and regulations of the
                     Republic of Korea. Personal information is handled in
                     accordance with our Privacy Policy and applicable data
                     protection laws.
@@ -129,14 +130,14 @@ const TermsOfUse = () => {
                     <li>
                       <strong>Required consent:</strong> Account creation
                       requires agreement to personal data collection and use,
-                      including cookies for authentication/session continuity
-                      and limited signals for advertising relevance, as
-                      described in the Privacy Policy.
+                      including cookies for authentication and session
+                      continuity, as described in the Privacy Policy.
                     </li>
                     <li>
                       <strong>No opt‑out in settings:</strong> If you do not
-                      agree at sign‑up, you cannot create an account. After
-                      sign‑up, these consents cannot be changed in{" "}
+                      agree at required consent, you cannot create an account.
+                      After sign‑up, these required consents cannot be changed
+                      in{" "}
                       <a href="/settings" className="text-[#6299FF]">
                         settings
                       </a>{" "}
@@ -198,7 +199,7 @@ const TermsOfUse = () => {
                   </ul>
                   <br />
                   <p>
-                    Users are solely responsible for their own content. TimeLine
+                    Users are solely responsible for their own content. TimeLine-io
                     assumes no liability for any illegal, infringing, or
                     defamatory materials uploaded by users.
                   </p>
@@ -211,11 +212,11 @@ const TermsOfUse = () => {
                 className="flex flex-col lg:mt-[10rem] mt-[8rem]"
               >
                 <h3 className="2xl:text-[4rem] lg:text-[3.2rem] md:text-[2.8rem] text-[1.8rem] text-normal">
-                  License to TimeLine (Limited)
+                  License to TimeLine-io (Limited)
                 </h3>
                 <div className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal ">
                   <p>
-                    You grant TimeLine a non-exclusive, worldwide, royalty-free
+                    You grant TimeLine-io a non-exclusive, worldwide, royalty-free
                     license to host, reproduce, display, distribute, and
                     technically transform your content within the Service (e.g.,
                     formatting, caching) solely to operate the Service. This
@@ -386,8 +387,8 @@ const TermsOfUse = () => {
                     <li>
                       <strong>Personalized ads:</strong> Limited signals may be
                       used to improve ad relevance as described in the Privacy
-                      Policy. There is no setting to opt out of personalized ads
-                      or cookies unless required by applicable law.
+                      Policy. You can opt out of personalized ads and cookies
+                      through your account settings at any time.
                     </li>
                     <li>
                       <strong>Non‑logged‑in use:</strong> For non‑logged‑in
@@ -483,11 +484,11 @@ const TermsOfUse = () => {
                 <div className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal ">
                   <p>
                     The Service (software, design, trademarks) is owned by
-                    TimeLine or its licensors. You may not copy, modify,
+                    TimeLine-io or its licensors. You may not copy, modify,
                     distribute, reverse engineer, or create derivative works of
                     the Service except as expressly permitted.
                     <br />
-                    If you believe that content on TimeLine infringes your
+                    If you believe that content on TimeLine-io infringes your
                     copyright or trademark, please submit a notice through the
                     Help page. We will respond promptly in accordance with
                     applicable law.
@@ -505,7 +506,7 @@ const TermsOfUse = () => {
                 </h3>
                 <div className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal ">
                   <p>
-                    The Service is provided "as is" and "as available." TimeLine
+                    The Service is provided "as is" and "as available." TimeLine-io
                     may modify, suspend, or discontinue any part of the Service
                     with prior notice, except in urgent circumstances. We do not
                     warrant uninterrupted or error‑free operation. Beta/MVP
@@ -525,7 +526,7 @@ const TermsOfUse = () => {
                 </h3>
                 <div className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal ">
                   <p>
-                    To the maximum extent permitted by law, TimeLine is not
+                    To the maximum extent permitted by law, TimeLine-io is not
                     liable for indirect, incidental, special, consequential, or
                     punitive damages, or loss of data, profits, or goodwill,
                     arising from or related to your use of the Service. Where
@@ -546,7 +547,7 @@ const TermsOfUse = () => {
                 </h3>
                 <div className="2xl:text-[1.6rem] md:text-[1.4rem] text-[1rem] font-normal ">
                   <p>
-                    You agree to indemnify and hold harmless TimeLine, its
+                    You agree to indemnify and hold harmless TimeLine-io, its
                     affiliates, and providers from claims, losses, and expenses
                     (including reasonable attorneys' fees) arising from your
                     content, your use of the Service, or your violation of these
@@ -590,7 +591,7 @@ const TermsOfUse = () => {
                     effective date (30 days for significant changes) via in-app
                     notice and/or website announcement. Material changes will be
                     announced in‑app or on our website and/or by email (when
-                    available). By continuing to use TimeLine after changes take
+                    available). By continuing to use TimeLine-io after changes take
                     effect, you agree to the updated Terms.
                   </p>
                 </div>
@@ -613,7 +614,7 @@ const TermsOfUse = () => {
                     </a>
                     .
                     <br />
-                    Operator: Hong Seung Won (TimeLine) <br />
+                    Operator: Hong Seung Won (TimeLine-io) <br />
                     Contact: timelineiocommunity@gmail.com
                   </p>
                 </div>

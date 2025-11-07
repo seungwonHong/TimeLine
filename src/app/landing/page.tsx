@@ -28,8 +28,8 @@ const LandingPage = () => {
 
       <div className="2xl:mt-[2rem] lg:mt-[1.2rem] mt-[0.8rem] 2xl:w-[80rem] lg:w-[56rem] md:w-[48rem] w-[34rem] mx-auto">
         <p className="2xl:text-[2.4rem] lg:text-[1.6rem] text-[1.2rem] text-[var(--header-text)] font-light text-center fade-down-delay-1">
-          TimeLine-io is the best platform for various kind of developers. You can
-          post your ideas, create a topics, recruit people for projects.
+          TimeLine-io is the best platform for various kind of developers. You
+          can post your ideas, create a topics, recruit people for projects.
         </p>
       </div>
 
@@ -39,7 +39,7 @@ const LandingPage = () => {
             Get Started
           </Button>
         </Link>
-        <Link href="/">
+        <Link href="/main/home">
           <Button className="flex flex-row items-center justify-center gap-2 2xl:text-[2rem] lg:text-[1.6rem] text-[1.4rem] font-regular bg-transparent text-[var(--foreground)] hover:bg-[var(--button-hover-transparent)] duration-300 ease-in-out px-[2rem] py-[0.8rem]">
             Explore{" "}
             <ChevronRight className="lg:w-[2rem] lg:h-[2rem] w-[1.6rem] h-[1.6rem]" />
@@ -59,9 +59,11 @@ const LandingPage = () => {
           Start building your creative journey
         </h2>
         <ArrowDown className="2xl:w-[3.2rem] lg:w-[2.4rem] md:w-[1.6rem] w-[1.6rem] 2xl:h-[3.2rem] lg:h-[2.4rem] md:h-[1.6rem] h-[1.6rem] 2xl:mt-[3.2rem] lg:mt-[2.4rem] md:mt-[1.6rem] mt-[1.2rem] text-[#808080]" />
-        <Button className="2xl:text-[2rem] lg:text-[1.6rem] text-[1.4rem] font-regular hover:bg-[var(--button-hover)] duration-300 ease-in-out cursor-pointer 2xl:mt-[3.2rem] lg:mt-[2.4rem] md:mt-[1.6rem] mt-[1.2rem] px-[2rem] py-[0.8rem]">
-          Get Started
-        </Button>
+        <Link href="/main/home">
+          <Button className="2xl:text-[2rem] lg:text-[1.6rem] text-[1.4rem] font-regular hover:bg-[var(--button-hover)] duration-300 ease-in-out cursor-pointer 2xl:mt-[3.2rem] lg:mt-[2.4rem] md:mt-[1.6rem] mt-[1.2rem] px-[2rem] py-[0.8rem]">
+            Get Started
+          </Button>
+        </Link>
       </div>
 
       <Footer />

@@ -135,7 +135,8 @@ const Signup = () => {
 
             <div className="flex flex-col gap-[0.8rem]">
               <span>
-                Marketing: I agree to receive promotions via Email / Push / SMS.{" "}
+                Marketing: I agree to receive important updates via Email / Push
+                and personalized ads on the site.{" "}
                 <span className="text-[#676767]">(optional)</span>
               </span>
 

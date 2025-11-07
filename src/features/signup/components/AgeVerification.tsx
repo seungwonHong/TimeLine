@@ -101,7 +101,7 @@ const AgeVerification = ({ className }: Props) => {
       className={`flex flex-col 2xl:w-[48rem] lg:w-[40rem] md:w-[32rem] w-[32rem] ${className}`}
     >
       <h1 className="2xl:text-[6.4rem] lg:text-[4rem] md:text-[3.2rem] text-[3.2rem] text-medium">
-        Are you old enough to use the TimeLine platform?
+        Are you old enough to use the TimeLine-io platform?
       </h1>
 
       <h2 className="text-[#676767] 2xl:text-[2rem] lg:text-[1.8rem] md:text-[1.6rem] text-[1.4rem] text-normal 2xl:mt-[5.6rem] lg:mt-[4.8rem] md:mt-[4rem] mt-[3.2rem]">
