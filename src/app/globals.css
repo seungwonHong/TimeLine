@@ -17,8 +17,10 @@
   --button-text: #ffffff;
   --button-hover: #3c3c3c;
   --button-hover-transparent: #e8e8e8;
-  --landing-tab-button: #f8f8f8;
+  --landing-tab-button: #eeeeee;
   --landing-tab-button-active: #ffffff;
+  --side-bar-plus-button:rgba(236, 236, 236, 0.5);
+  --side-bar-plus-button-hover:rgba(227, 227, 227, 0.8);
 
   /* help card */
   --help-card-background: #f8f8f8;
@@ -31,22 +33,55 @@
 
   /* input & text area */
   --input-label: #676767;
-  --input-bg: #ececec;
+  --input-bg: #f6f6f6;
 
   /* primary color */
-  --primary-color: #6299FF;
+  --primary-color: #6299ff;
 
   /* modal */
   --modal-background: #f6f6f6;
 
   /* grid box(interest 선택용) */
-  --grid-box-bg: #EDEDED;
+  --grid-box-bg: #ededed;
 
   /* search icon */
-  --search-icon: #CDCDCD;
+  --search-icon: #cdcdcd;
 
   /* user card */
-  --user-card-bg: #F5F5F5;
+  --user-card-bg: #f5f5f5;
+
+  /* main background */
+  --main-background: #f3f2f4;
+
+  /* main page header */
+  --header-drawer-bg: #dddddd99;
+  --header-profile-bg: #dfdfdf80;
+
+  /* side bar */
+  --side-bar-hover: #f5f5f5;
+  --side-bar-mobile-background: rgba(232, 232, 232, 0.5);
+
+  /* side panel */
+  --side-panel-background: #f6f6f6;
+  --side-panel-hover: #e9e9e9;
+  --side-panel-share-button: rgba(210, 210, 210, 0.5);
+  --side-panel-share-button-hover: rgba(210, 210, 210, 0.8);
+
+  /* divider */
+  --divide-color: #C8C4C4;
+
+  /* post filter */
+  --post-filter-background: #f5f5f5;
+
+  /* drop down menu */
+  --drop-down-menu-background: rgba(243, 243, 243, 0.5);
+  --drop-down-menu-hover: #e5e5e5;
+
+  /* post action bar */
+  --post-action-bar-bookmark: #000000;
+
+  /* topic profile */
+  --topic-profile-bg: #e2e2e2;
 }
 
 @theme inline {
@@ -82,22 +117,45 @@
   --color-grid-box-bg: var(--grid-box-bg);
   --color-search-icon: var(--search-icon);
   --color-user-card-bg: var(--user-card-bg);
+  --color-main-background: var(--main-background);
+  --color-side-bar-hover: var(--side-bar-hover);
+  --color-header-profile-bg: var(--header-profile-bg);
+  --color-side-bar-mobile-background: var(--side-bar-mobile-background);
+  --color-side-panel-background: var(--side-panel-background);  
+  --color-side-panel-hover: var(--side-panel-hover);
+  --color-side-panel-share-button: var(--side-panel-share-button);
+  --color-side-panel-share-button-hover: var(--side-panel-share-button-hover);
+  --color-divide-color: var(--divide-color);
+  --color-post-filter-background: var(--post-filter-background);
+  --color-drop-down-menu-background: var(--drop-down-menu-background);
+  --color-drop-down-menu-hover: var(--drop-down-menu-hover);
+  --color-post-action-bar-bookmark: var(--post-action-bar-bookmark);
+  --color-topic-profile-bg: var(--topic-profile-bg);
+  --color-side-bar-plus-button: var(--side-bar-plus-button);
+  --color-side-bar-plus-button-hover: var(--side-bar-plus-button-hover);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
     --header-background: #25252580;
     --header-text: #bababa;
+
+    /* login button */
     --login-button: #3f3f3f99;
+    --login-button-hover: #5f5f5f99;
+
+    /* button */
     --button-bg: #ffffff;
     --button-text: #000000;
     --button-hover: #c1c1c1;
     --button-hover-transparent: #222222;
     --landing-tab-button: #25252580;
     --landing-tab-button-active: #000000;
-    --login-button-hover: #5f5f5f99;
+    --side-bar-plus-button: rgba(53, 53, 53, 0.5);
+    --side-bar-plus-button-hover: rgba(53, 53, 53, 0.8);
+
     --help-card-background: #1a1a1a;
     --privacy-policy-navigation-text: #515050;
     --privacy-policy-navigation-text-selected: #ffffff;
@@ -106,10 +164,10 @@
 
     /* input & text area */
     --input-label: #595959;
-    --input-bg: #1F1F1F;
+    --input-bg: #151515;
 
     /* primary color */
-    --primary-color: #6299FF;
+    --primary-color: #6299ff;
 
     /* modal */
     --modal-background: #101010;
@@ -122,6 +180,39 @@
 
     /* user card */
     --user-card-bg: #1a1a1a;
+
+    /* main background */
+    --main-background: #5d5b5a;
+
+    /* main page header */
+    --header-drawer-bg: #3f3f3f99;
+    --header-profile-bg: #3f3f3f99;
+
+    /* side bar */
+    --side-bar-hover: #26262699;
+    --side-bar-mobile-background: rgba(0, 0, 0, 0.5);
+
+    /* side panel */
+    --side-panel-background: #151515;
+    --side-panel-hover: #2c2c2c99;
+    --side-panel-share-button: rgba(43, 43, 43, 0.5);
+    --side-panel-share-button-hover: rgba(51, 51, 51, 0.8);
+    
+    /* divider */
+    --divide-color: #373737;
+
+    /* post filter */
+    --post-filter-background: #26262699;
+
+    /* drop down menu */
+    --drop-down-menu-background: rgba(24, 24, 24, 0.7);
+    --drop-down-menu-hover: #2d2d2d99;
+
+    /* post action bar */
+    --post-action-bar-bookmark: #ffffff;
+
+    /* topic profile */
+    --topic-profile-bg: #26262699;
   }
 }
 
@@ -146,7 +237,8 @@ body {
   display: none;
 }
 
-html, body {
+html,
+body {
   -ms-overflow-style: none; /* IE & Edge */
   scrollbar-width: none; /* Firefox */
 }

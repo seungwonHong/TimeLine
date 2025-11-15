@@ -4,7 +4,6 @@ import { TriangleAlert } from "lucide-react";
 import { Eye } from "lucide-react";
 import { EyeOff } from "lucide-react";
 import { Plus } from "lucide-react";
-import useStepStore from "@/features/signup/store/step";
 import { Search } from "lucide-react";
 
 interface Props
@@ -40,7 +39,6 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, Props>(
   ) => {
     const [viewPassword, setViewPassword] = useState(false);
     const [inputType, setInputType] = useState(type);
-    const { setIntroduceYourself, introduceYourself } = useStepStore();
 
     return (
       <div className={`${wrapperClassName} flex flex-col`}>
@@ -61,7 +59,9 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, Props>(
         )}
         <div className="relative">
           {type === "search" && (
-            <Search className={`absolute top-1/2 -translate-y-1/2 ${searchIconClassName}`} />
+            <Search
+              className={`absolute top-1/2 -translate-y-1/2 ${searchIconClassName}`}
+            />
           )}
           {type === "textarea" ? (
             <textarea
