@@ -1,0 +1,12 @@
+@media (max-width: 767px) {
+  [data-main-content]:not([data-initialized]) {
+    margin-left: 0 !important;
+  }
+}
+
+/* (app) 내부에서만 body 배경색 변경 */
+@media (min-width: 768px) {
+  body:has([data-app-container]) {
+    background: var(--main-background) !important;
+  }
+}
