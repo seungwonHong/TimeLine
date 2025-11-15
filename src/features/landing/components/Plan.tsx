@@ -1,6 +1,6 @@
 "use client";
 import SubscriptionCard from "@/shared/components/SubscriptionCard";
-import React from "react";
+import React, { Suspense } from "react";
 import TabButton from "@/shared/components/TabButton";
 import { useTabStore } from "../store/tabButton";
 
@@ -26,8 +26,14 @@ const Plan = () => {
         unlock exclusive benefits.
       </span>
 
-      <div className="lg:hidden flex flex-col items-center justify-center md:mt-[2.4rem] mt-[1.6rem]" data-aos="fade-up">
-        <TabButton tabs={["Free", "Pro", "Ultimate"]} type="landing" />
+      <div
+        className="lg:hidden flex flex-col items-center justify-center md:mt-[2.4rem] mt-[1.6rem]"
+        data-aos="fade-up"
+      >
+        
+        <Suspense fallback={<div></div>}>
+          <TabButton tabs={["Free", "Pro", "Ultimate"]} type="landing" />
+        </Suspense>
 
         {activeTab === "Free" && (
           <SubscriptionCard
