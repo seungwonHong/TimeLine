@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { House } from "lucide-react";
 import { Bell } from "lucide-react";
 import { Code } from "lucide-react";
@@ -55,7 +55,9 @@ const Main = async ({
           <div className="flex flex-col w-full 2xl:max-w-[80rem] lg:max-w-[64rem] md:max-w-[56rem] xl:min-w-[40rem]">
             {/* lg 이하를 위한 탭 버튼 */}
             <div className="w-full xl:hidden mb-[2rem]">
-              <TabButton tabs={["Posts", "Topics"]} type="home" />
+              <Suspense fallback={<div></div>}>
+                <TabButton tabs={["Posts", "Topics"]} type="home" />
+              </Suspense>
             </div>
 
             {/* 포스트 필터 */}

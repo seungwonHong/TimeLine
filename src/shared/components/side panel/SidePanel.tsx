@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { TrendingUp } from "lucide-react";
 import Input from "../Input";
 import TabButton from "../TabButton";
@@ -27,7 +27,9 @@ const SidePanel = (props: Props) => {
         <SidePanelHeader />
 
         {/* 포스트 & 토픽 전환 토글(탭 버튼) */}
-        <TabButton tabs={["Posts", "Topics"]} type="home" />
+        <Suspense fallback={<div></div>}>
+          <TabButton tabs={["Posts", "Topics"]} type="home" />
+        </Suspense>
 
         {/* 트렌딩 */}
         <div className="flex flex-col w-full mt-[4rem]">
