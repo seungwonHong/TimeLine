@@ -103,8 +103,8 @@ export const metadata: Metadata = {
         media: "(prefers-color-scheme: dark)",
       },
     ],
-    shortcut: "/favicon.png", // 라이트 모드용 (기본값)
-    apple: "/favicon.png", // 라이트 모드용 (기본값)
+    shortcut: "/faviconDark.png", // 라이트 모드용 (기본값)
+    apple: "/faviconDark.png", // 라이트 모드용 (기본값)
   },
 };
 

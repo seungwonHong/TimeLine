@@ -2,6 +2,8 @@ import React from "react";
 import Post from "@/shared/components/post components/Post";
 import SidePanel from "@/shared/components/side panel/SidePanel";
 import MobilePostButton from "@/features/main/components/MobilePostButton";
+import Input from "@/shared/components/Input";
+import { SendHorizontal } from "lucide-react";
 
 const PostDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
@@ -16,6 +18,19 @@ const PostDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
             <Post id={id} />
 
             {/* 댓글 입력 */}
+            <div className="relative">
+              <Input
+                type="textarea"
+                placeholder="Add a comment"
+                wrapperClassName="w-full xl:mt-[3.6rem] lg:mt-[2.4rem] md:mt-[2rem] mt-[1.6rem]"
+                inputClassName="w-full lg:rounded-[1.2rem] md:rounded-[0.8rem] rounded-[1.2rem] lg:py-[0.8rem] lg:pl-[0.8rem] lg:pr-[4.8rem] py-[0.6rem] pl-[0.6rem] pr-[4.2rem] 2xl:text-[1.8rem] lg:text-[1.6rem] md:text-[1.4rem] text-[1.6rem] font-normal"
+                textareaRows={3}
+                autoResize={true}
+              />
+              <SendHorizontal className="absolute bottom-[1.6rem] right-[1.6rem] cursor-pointer" />
+            </div>
+
+            {/* 댓글 목록 */}
           </div>
 
           {/* 사이드 패널 */}
