@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, forwardRef, Ref } from "react";
+import React, { useState, forwardRef, Ref, useRef } from "react";
 import { TriangleAlert } from "lucide-react";
 import { Eye } from "lucide-react";
 import { EyeOff } from "lucide-react";
@@ -17,6 +17,8 @@ interface Props
   wrapperClassName?: string;
   error?: string;
   add?: boolean;
+  textareaRows?: number;
+  autoResize?: boolean;
   addHandler?: () => void;
 }
 
@@ -33,12 +35,23 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, Props>(
       error,
       add,
       addHandler,
+      textareaRows = 5,
+      autoResize = false,
       ...rest
     },
     ref
   ) => {
     const [viewPassword, setViewPassword] = useState(false);
     const [inputType, setInputType] = useState(type);
+    const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+    const adjustTextareaHeight = () => {
+      const textarea = textareaRef.current;
+      if (textarea) {
+        textarea.style.height = "auto";
+        textarea.style.height = `${textarea.scrollHeight}px`;
+      }
+    };
 
     return (
       <div className={`${wrapperClassName} flex flex-col`}>
@@ -65,9 +78,26 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, Props>(
           )}
           {type === "textarea" ? (
             <textarea
-              ref={ref as React.Ref<HTMLTextAreaElement>}
+              ref={
+                autoResize
+                  ? (node) => {
+                      if (typeof ref === "function") {
+                        ref(node);
+                      } else if (ref) {
+                        ref.current = node;
+                      }
+                      // 내부 textareaRef에도 할당 (높이 조정용)
+                      textareaRef.current = node;
+                      // 초기 높이 조정
+                      if (node) {
+                        adjustTextareaHeight();
+                      }
+                    }
+                  : (ref as React.Ref<HTMLTextAreaElement>)
+              }
               placeholder={placeholder}
-              rows={5}
+              onInput={autoResize ? adjustTextareaHeight : undefined}
+              rows={textareaRows}
               className={`bg-[var(--color-input-bg)] border-none outline-none resize-none ${inputClassName}`}
               id={label}
               {...(rest as React.TextareaHTMLAttributes<HTMLTextAreaElement>)}
