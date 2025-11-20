@@ -9,7 +9,7 @@ const TopicProfileComponent = (props: Props) => {
       <div className="flex flex-row items-center w-fit">
         {Array.from({ length: 4 }).map((_, index) => (
           <div
-            className={`shrink-0 flex items-center justify-center rounded-full md:w-[3.2rem] md:h-[3.2rem] bg-[var(--color-topic-profile-bg)] ${
+            className={`shrink-0 flex items-center justify-center rounded-full md:w-[3.2rem] md:h-[3.2rem] w-[2.8rem] h-[2.8rem] bg-[var(--color-topic-profile-bg)] ${
               index > 0 ? "-ml-[0.8rem]" : ""
             } z-[${index + 1}]`}
             key={index}
@@ -20,7 +20,7 @@ const TopicProfileComponent = (props: Props) => {
             />
           </div>
         ))}
-        <span className="md:text-[1.4rem] font-normal ml-[0.8rem]">+ 124</span>
+        <span className="md:text-[1.4rem] text-[1.2rem] font-normal ml-[0.8rem]">+ 124</span>
       </div>
     </div>
   );

@@ -13,6 +13,10 @@ interface DropDownStore {
   setMobileProfileDropDownOpen: (isOpen: boolean) => void;
   sideBarDropDownOpen: boolean;
   setSideBarDropDownOpen: (isOpen: boolean) => void;
+  commentEditOpen: number | null;
+  setCommentEditOpen: (commentEditOpen: number | null) => void;
+  sideBarProfileDropDownOpen: boolean;
+  setSideBarProfileDropDownOpen: (isOpen: boolean) => void;
 }
 
 const useDropDownStore = create<DropDownStore>((set) => ({
@@ -31,6 +35,11 @@ const useDropDownStore = create<DropDownStore>((set) => ({
     set({ mobileProfileDropDownOpen }),
   sideBarDropDownOpen: false,
   setSideBarDropDownOpen: (sideBarDropDownOpen) => set({ sideBarDropDownOpen }),
+  commentEditOpen: null,
+  setCommentEditOpen: (commentEditOpen) => set({ commentEditOpen }),
+  sideBarProfileDropDownOpen: false,
+  setSideBarProfileDropDownOpen: (sideBarProfileDropDownOpen) =>
+    set({ sideBarProfileDropDownOpen }),
 }));
 
 export default useDropDownStore;

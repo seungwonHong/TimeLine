@@ -10,6 +10,7 @@ import SidePanel from "@/shared/components/side panel/SidePanel";
 import PostFilter from "@/shared/components/post components/PostFilter";
 import TabButton from "@/shared/components/TabButton";
 import MobilePostButton from "@/features/main/components/MobilePostButton";
+import TopicComponent from "@/shared/components/topic/TopicComponent";
 
 const Main = async ({
   params,
@@ -17,7 +18,7 @@ const Main = async ({
 }: {
   params: Promise<{ id: string }>;
   searchParams: Promise<{
-    type?: "post" | "topic";
+    type?: "posts" | "topics";
     filter?: "recent" | "foryou" | "follower";
   }>;
 }) => {
@@ -39,7 +40,7 @@ const Main = async ({
     "2xl:w-[3.6rem] 2xl:h-[3.6rem] lg:w-[3.2rem] lg:h-[3.2rem] md:w-[2.8rem] md:h-[2.8rem] w-[3.2rem] h-[3.2rem]";
 
   return (
-    <div className="relative flex flex-col items-center justify-center 2xl:mt-[6.4rem] md:mt-[5.6rem] mt-[8rem] 2xl:px-[8rem] lg:px-[6rem] md:px-[3.2rem] px-[1.6rem]">
+    <div className="relative flex flex-col items-center justify-center 2xl:mt-[6.4rem] md:mt-[5.6rem] mt-[8rem] 2xl:px-[8rem] lg:px-[6rem] md:px-[3.2rem] px-[1.6rem] overflow-x-hidden">
       <div className="flex flex-col items-start justify-center w-full 2xl:max-w-[150rem] lg:max-w-[130rem] md:max-w-[100rem]">
         {/* 제목 */}
         <div className=" flex flex-row w-full items-center 2xl:gap-[1.6rem] lg:gap-[1.2rem] md:gap-[0.8rem] gap-[0.4rem]">
@@ -63,18 +64,33 @@ const Main = async ({
             {/* 포스트 필터 */}
             <PostFilter />
 
-            {Array.from({ length: 5 }).map((_, index) => (
-              <React.Fragment key={index}>
-                <Post id={index.toString()} />
-                {index < 4 && (
-                  <div className="2xl:my-[2.4rem] lg:my-[2rem] md:my-[1.6rem] my-[1.2rem] bg-divide-color w-full h-[0.5px]" />
-                )}
-              </React.Fragment>
-            ))}
+            {type === "posts" ? (
+              <>
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <React.Fragment key={index}>
+                    <Post id={index.toString()} />
+                    {index < 4 && (
+                      <div className="2xl:my-[2.4rem] lg:my-[2rem] md:my-[1.6rem] my-[1.2rem] bg-divide-color w-full h-[0.5px]" />
+                    )}
+                  </React.Fragment>
+                ))}
+              </>
+            ) : (
+              <>
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <React.Fragment key={index}>
+                    <TopicComponent type="mainPage" />
+                    {index < 4 && (
+                      <div className="2xl:my-[1.4rem] lg:my-[1rem] md:my-[0.8rem] my-[0.6rem] bg-divide-color w-full h-[0.5px]" />
+                    )}
+                  </React.Fragment>
+                ))}
+              </>
+            )}
           </div>
 
           {/* 사이드 패널 */}
-          <SidePanel />
+          <SidePanel usage="home" />
         </div>
       </div>
 

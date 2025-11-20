@@ -6,12 +6,22 @@ import SidePanelHeader from "./SidePanelHeader";
 import TrendingComponent from "./TrendingComponent";
 import TopicComponent from "../topic/TopicComponent";
 import Link from "next/link";
+import OriginalSidePanelContents from "./OriginalSidePanelContents";
+import ProfileSidePanelContents from "@/features/profile/components/ProfileSidePanelContents";
 
-interface Props {}
+interface Props {
+  usage: "home" | "profile" | "topic" | "post";
+}
 
-const SidePanel = (props: Props) => {
+const SidePanel = ({ usage }: Props) => {
   return (
-    <div className="sticky top-[5.6rem] xl:flex flex-col hidden 2xl:max-w-[48rem] lg:max-w-[40rem] w-full overflow-y-auto h-[calc(100vh-5.6rem)]">
+    <div
+      className={`sticky  xl:flex flex-col hidden 2xl:max-w-[48rem] lg:max-w-[40rem] w-full overflow-y-auto  ${
+        usage === "profile"
+          ? "top-[6.4rem] h-[calc(100vh-6.4rem)]"
+          : "top-[5.6rem] h-[calc(100vh-5.6rem)]"
+      }`}
+    >
       {/* 검색 */}
       <Input
         type="search"
@@ -26,44 +36,8 @@ const SidePanel = (props: Props) => {
         {/* 포스트 생성 버튼 & 간단한 정보 */}
         <SidePanelHeader />
 
-        {/* 포스트 & 토픽 전환 토글(탭 버튼) */}
-        <Suspense fallback={<div></div>}>
-          <TabButton tabs={["Posts", "Topics"]} type="home" />
-        </Suspense>
-
-        {/* 트렌딩 */}
-        <div className="flex flex-col w-full mt-[4rem]">
-          <div className="flex flex-row items-center gap-[1rem]">
-            <TrendingUp className="w-[2.4rem] h-[2.4rem]" />
-            <h2 className="text-[1.6rem] font-medium">Trending</h2>
-          </div>
-
-          <div className="flex flex-col gap-[0.4rem] mt-[1.2rem]">
-            {Array.from({ length: 10 }).map((_, index) => (
-              <TrendingComponent
-                key={index}
-                number={index + 1}
-                content={`Trending ${index + 1}`}
-                trendingNumber={100}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* 내 토픽 */}
-        <div className="flex flex-col">
-          <h2 className="text-[1.6rem] font-medium mt-[4rem]">My Topics</h2>
-          <div className="flex flex-col gap-[0.4rem] mt-[1.2rem]">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <React.Fragment key={index}>
-                <TopicComponent />
-                {index < 4 && (
-                  <div className="my-[0.4rem] bg-divide-color w-full h-[0.5px]" />
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
+        {usage === "home" && <OriginalSidePanelContents />}
+        {usage === "profile" && <ProfileSidePanelContents />}
       </div>
 
       {/* 사이드 패널 - topic */}

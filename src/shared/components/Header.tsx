@@ -9,6 +9,7 @@ import useDropDownStore from "../store/dropDownStore";
 import DropDownMenu from "./DropDownMenu";
 import { Settings } from "lucide-react";
 import { LogOut } from "lucide-react";
+import ProfileImageComponent from "./ProfileImageComponent";
 
 const Header = () => {
   const { isOpen, setIsOpen, setIsMobile, isMobile } = useSidebarStore();
@@ -130,26 +131,26 @@ const Header = () => {
 
       <div className="relative md:hidden flex flex-row items-center justify-center gap-[1.6rem]">
         <Search className="w-[2.4rem] h-[2.4rem]" />
-        <div
-          className="rounded-full bg-header-profile-bg w-[4rem] h-[4rem] flex items-center justify-center"
-          onClick={(e) => {
-            e.stopPropagation();
+        <ProfileImageComponent
+          bgSize="w-[4rem] h-[4rem]"
+          defaultProfileSize="w-[2.4rem] h-[2.4rem]"
+          onClick={(e?: React.MouseEvent<HTMLDivElement>) => {
+            e?.stopPropagation();
             setMobileProfileDropDownOpen(!mobileProfileDropDownOpen);
           }}
-        >
-          <User className="w-[2.4rem] h-[2.4rem]" />
-        </div>
+        />
 
         {mobileProfileDropDownOpen && (
           <DropDownMenu className="top-[6.4rem] right-[0]" align="right">
-            <div
+            <Link
+              href="/profile/1"
               className={`flex flex-row items-center justify-center gap-[1rem] px-[3.2rem] py-[0.8rem] rounded-[0.8rem] w-full hover:bg-drop-down-menu-hover cursor-pointer transition-all duration-300 ease-in-out`}
             >
               <User className="w-[2.4rem] h-[2.4rem]" />
               <span className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.6rem] font-normal whitespace-nowrap">
                 My Profile
               </span>
-            </div>
+            </Link>
             <div
               className={`flex flex-row items-center justify-center gap-[1rem] px-[3.2rem] py-[0.8rem] rounded-[0.8rem] w-full hover:bg-drop-down-menu-hover cursor-pointer transition-all duration-300 ease-in-out`}
             >

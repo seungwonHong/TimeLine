@@ -3,6 +3,7 @@ import { User } from "lucide-react";
 import Image from "next/image";
 import PostActionBar from "./PostActionBar";
 import EditPost from "./EditPost";
+import ProfileImageComponent from "../ProfileImageComponent";
 
 interface Props {
   id: string;
@@ -13,12 +14,10 @@ const Post = ({ id }: Props) => {
     <div className="flex flex-col w-full">
       <div className="flex flex-row items-center">
         {/* 프로필 사진 */}
-        <div className="rounded-full flex items-center justify-center  bg-header-profile-bg 2xl:w-[5.6rem] 2xl:h-[5.6rem] lg:w-[4.8rem] lg:h-[4.8rem] md:w-[4rem] md:h-[4rem] w-[4.8rem] h-[4.8rem]">
-          <User
-            className="2xl:w-[3.6rem] 2xl:h-[3.6rem] lg:w-[3.2rem] lg:h-[3.2rem] md:w-[2.8rem] md:h-[2.8rem] w-[3.6rem] h-[3.6rem]"
-            strokeWidth={1.5}
-          />
-        </div>
+        <ProfileImageComponent
+          bgSize="2xl:w-[5.6rem] 2xl:h-[5.6rem] lg:w-[4.8rem] lg:h-[4.8rem] md:w-[4rem] md:h-[4rem] w-[4.8rem] h-[4.8rem]"
+          defaultProfileSize="2xl:w-[3.6rem] 2xl:h-[3.6rem] lg:w-[3.2rem] lg:h-[3.2rem] md:w-[2.8rem] md:h-[2.8rem] w-[3.6rem] h-[3.6rem]"
+        />
 
         {/* 이름 & 시간 */}
         <div className="flex flex-col 2xl:ml-[1.4rem] lg:ml-[1.2rem] md:ml-[0.8rem] ml-[1.2rem]">

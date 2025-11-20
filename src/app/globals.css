@@ -8,12 +8,16 @@
   --header-background: #f4f4f480;
   --header-text: #808080;
 
+  /* profile image */
+  --profile-default-icon-bg: #bababa80;
+
   /* login button */
   --login-button: #cbcbcb80;
   --login-button-hover: #b0afaf80;
 
   /* button */
   --button-bg: #000000;
+  --button-border: #000000;
   --button-text: #ffffff;
   --button-hover: #3c3c3c;
   --button-hover-transparent: #e8e8e8;
@@ -91,8 +95,10 @@
   --font-mono: var(--font-roboto);
   --color-header-background: var(--header-background);
   --color-header-text: var(--header-text);
+  --color-profile-default-icon-bg: var(--profile-default-icon-bg);
   --color-login-button: var(--login-button);
   --color-button-bg: var(--button-bg);
+  --color-button-border: var(--button-border);
   --color-button-text: var(--button-text);
   --color-button-hover: var(--button-hover);
   --color-button-hover-transparent: var(--button-hover-transparent);
@@ -142,12 +148,16 @@
     --header-background: #25252580;
     --header-text: #bababa;
 
+    /* profile image */
+    --profile-default-icon-bg: #6f6f6f99;
+
     /* login button */
     --login-button: #3f3f3f99;
     --login-button-hover: #5f5f5f99;
 
     /* button */
     --button-bg: #ffffff;
+    --button-border: #ffffff;
     --button-text: #000000;
     --button-hover: #c1c1c1;
     --button-hover-transparent: #222222;

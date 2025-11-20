@@ -6,9 +6,7 @@ import { Quote } from "lucide-react";
 import { Share } from "lucide-react";
 import { Bookmark } from "lucide-react";
 
-type Props = {};
-
-const PostActionBar = (props: Props) => {
+const PostActionBar = () => {
   const [isLiked, setIsLiked] = useState(false);
   const [isBookmarked, setIsBookmarked] = useState(false);
 

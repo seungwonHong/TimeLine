@@ -39,7 +39,7 @@ const TabButton = ({ tabs, type }: Props) => {
 
   return (
     <div
-      className={`flex flex-row items-center justify-center  rounded-[0.8rem] bg-[var(--landing-tab-button)] ${
+      className={`flex flex-row items-center justify-center rounded-[0.8rem] bg-[var(--landing-tab-button)] ${
         type === "landing"
           ? "md:h-[4.8rem] h-[4.6rem] md:p-[0.4rem] p-[0.2rem] gap-[0.4rem]"
           : "w-full mt-[2rem] lg:h-[4.4rem] h-[4.2rem] p-[0.2rem] gap-[0.2rem]"
