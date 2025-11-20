@@ -59,9 +59,9 @@ const LandingPage = () => {
           Start building your creative journey
         </h2>
         <ArrowDown className="2xl:w-[3.2rem] lg:w-[2.4rem] md:w-[1.6rem] w-[1.6rem] 2xl:h-[3.2rem] lg:h-[2.4rem] md:h-[1.6rem] h-[1.6rem] 2xl:mt-[3.2rem] lg:mt-[2.4rem] md:mt-[1.6rem] mt-[1.2rem] text-[#808080]" />
-        <Link href="/main/home">
+        <Link href="/main/home?type=posts&filter=recent">
           <Button className="2xl:text-[2rem] lg:text-[1.6rem] text-[1.4rem] font-regular hover:bg-[var(--button-hover)] duration-300 ease-in-out cursor-pointer 2xl:mt-[3.2rem] lg:mt-[2.4rem] md:mt-[1.6rem] mt-[1.2rem] px-[2rem] py-[0.8rem]">
-            Get Started
+            Explore TimeLine-io
           </Button>
         </Link>
       </div>

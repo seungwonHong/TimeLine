@@ -16,6 +16,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     setMobilePostButtonDropDownOpen,
     setMobileProfileDropDownOpen,
     setSideBarDropDownOpen,
+    setCommentEditOpen,
+    setSideBarProfileDropDownOpen,
   } = useDropDownStore();
 
   useEffect(() => {
@@ -34,6 +36,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         setMobilePostButtonDropDownOpen(false);
         setMobileProfileDropDownOpen(false);
         setSideBarDropDownOpen(false);
+        setCommentEditOpen(null);
+        setSideBarProfileDropDownOpen(false);
       }}
     >
       <Header />

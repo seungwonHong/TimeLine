@@ -6,8 +6,7 @@ interface SidebarStore {
   isMobile: boolean;
   setIsMobile: (isMobile: boolean) => void;
   isClicked: string;
-    setIsClicked: (isClicked: string) => void;
-    
+  setIsClicked: (isClicked: string) => void;
 }
 
 const useSidebarStore = create<SidebarStore>((set) => ({

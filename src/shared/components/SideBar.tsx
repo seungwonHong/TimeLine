@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { House } from "lucide-react";
+import { House, LogOut, Settings, User } from "lucide-react";
 import { Bell } from "lucide-react";
 import { Code } from "lucide-react";
 import { Play } from "lucide-react";
@@ -8,15 +8,20 @@ import { AudioLines } from "lucide-react";
 import { Paintbrush } from "lucide-react";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { User } from "lucide-react";
 import useSidebarStore from "../store/sidebarStore";
 import { Plus } from "lucide-react";
 import useDropDownStore from "../store/dropDownStore";
 import DropDownMenu from "./DropDownMenu";
+import ProfileImageComponent from "./ProfileImageComponent";
 
 const SideBar = () => {
   const { setIsOpen, isMobile, isClicked, setIsClicked } = useSidebarStore();
-  const { sideBarDropDownOpen, setSideBarDropDownOpen } = useDropDownStore();
+  const {
+    sideBarDropDownOpen,
+    setSideBarDropDownOpen,
+    sideBarProfileDropDownOpen,
+    setSideBarProfileDropDownOpen,
+  } = useDropDownStore();
 
   useEffect(() => {
     const currentPath = window.location.pathname;
@@ -167,14 +172,46 @@ const SideBar = () => {
         </div>
 
         {/* 프로필 */}
-        <div className="flex flex-row items-center ">
-          <Link
-            href="/profile"
-            className="rounded-full bg-header-profile-bg lg:w-[4rem] lg:h-[4rem] md:w-[4.8rem] md:h-[4.8rem] w-[3.2rem] h-[3.2rem] flex items-center justify-center"
-            onClick={() => isMobile && setIsOpen(false)}
-          >
-            <User className="lg:w-[2.4rem] lg:h-[2.4rem] md:w-[2.8rem] md:h-[2.8rem] w-[1.6rem] h-[1.6rem]" />
-          </Link>
+        <div className="relative flex flex-row items-center ">
+          {/* 드롭다운 메뉴 */}
+          {sideBarProfileDropDownOpen && (
+            <DropDownMenu className="bottom-[5.6rem] left-[0]" align="left">
+              <Link
+                href="/profile/1"
+                className={`flex flex-row items-center justify-center gap-[1rem] px-[3.2rem] py-[0.8rem] rounded-[0.8rem] w-full hover:bg-drop-down-menu-hover cursor-pointer transition-all duration-300 ease-in-out`}
+              >
+                <User className="w-[2.4rem] h-[2.4rem]" />
+                <span className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.6rem] font-normal whitespace-nowrap">
+                  My Profile
+                </span>
+              </Link>
+              <div
+                className={`flex flex-row items-center justify-center gap-[1rem] px-[3.2rem] py-[0.8rem] rounded-[0.8rem] w-full hover:bg-drop-down-menu-hover cursor-pointer transition-all duration-300 ease-in-out`}
+              >
+                <Settings className="w-[2.4rem] h-[2.4rem]" />
+                <span className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.6rem] font-normal whitespace-nowrap">
+                  Settings
+                </span>
+              </div>
+              <div
+                className={`flex flex-row items-center justify-center gap-[1rem] px-[3.2rem] py-[0.8rem] rounded-[0.8rem] w-full hover:bg-drop-down-menu-hover cursor-pointer transition-all duration-300 ease-in-out`}
+              >
+                <LogOut className="w-[2.4rem] h-[2.4rem]" />
+                <span className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.6rem] font-normal whitespace-nowrap">
+                  Logout
+                </span>
+              </div>
+            </DropDownMenu>
+          )}
+
+          <ProfileImageComponent
+            bgSize="lg:w-[4rem] lg:h-[4rem] md:w-[4.8rem] md:h-[4.8rem] w-[3.2rem] h-[3.2rem]"
+            defaultProfileSize="lg:w-[2.4rem] lg:h-[2.4rem] md:w-[2.8rem] md:h-[2.8rem] w-[1.6rem] h-[1.6rem]"
+            onClick={(e?: React.MouseEvent<HTMLDivElement>) => {
+              e?.stopPropagation();
+              setSideBarProfileDropDownOpen(!sideBarProfileDropDownOpen);
+            }}
+          />
 
           <div className="lg:flex hidden flex-col lg:ml-[1.2rem] ml-[0.8rem]">
             <span className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.4rem] font-normal">

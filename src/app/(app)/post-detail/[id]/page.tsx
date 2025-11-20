@@ -4,6 +4,7 @@ import SidePanel from "@/shared/components/side panel/SidePanel";
 import MobilePostButton from "@/features/main/components/MobilePostButton";
 import Input from "@/shared/components/Input";
 import { SendHorizontal } from "lucide-react";
+import Comment from "@/shared/components/post components/Comment";
 
 const PostDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
@@ -31,10 +32,15 @@ const PostDetail = async ({ params }: { params: Promise<{ id: string }> }) => {
             </div>
 
             {/* 댓글 목록 */}
+            <div className="flex flex-col w-full lg:mt-[2.4rem] md:mt-[2rem] mt-[1.6rem] lg:gap-[2.4rem] md:gap-[2rem] gap-[1.6rem]">
+              {Array.from({ length: 10 }).map((_, index) => (
+                <Comment key={index} commentId={index} />
+              ))}
+            </div>
           </div>
 
           {/* 사이드 패널 */}
-          <SidePanel />
+          <SidePanel usage="post" />
         </div>
       </div>
 
