@@ -12,19 +12,19 @@ import TabButton from "@/shared/components/TabButton";
 import MobilePostButton from "@/features/main/components/MobilePostButton";
 import TopicComponent from "@/shared/components/topic/TopicComponent";
 
-const Main = ({
+const Main = async ({
   params,
   searchParams,
 }: {
-  params: { id: string };
-  searchParams: {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{
     type?: "posts" | "topics";
-  };
+  }>;
 }) => {
   console.log("Before await params");
-  const { id } = params;
+  const { id } = await params;
   console.log("After await params, id:", id);
-  const { type } = searchParams;
+  const { type } = await searchParams;
   console.log("After await searchParams, type:", type);
   const capitalizedId = id.charAt(0).toUpperCase() + id.slice(1).toLowerCase();
 
