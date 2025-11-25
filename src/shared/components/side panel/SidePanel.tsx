@@ -1,13 +1,10 @@
-import React, { Suspense } from "react";
-import { TrendingUp } from "lucide-react";
+import React from "react";
 import Input from "../Input";
-import TabButton from "../TabButton";
 import SidePanelHeader from "./SidePanelHeader";
-import TrendingComponent from "./TrendingComponent";
-import TopicComponent from "../topic/TopicComponent";
 import Link from "next/link";
 import OriginalSidePanelContents from "./OriginalSidePanelContents";
 import ProfileSidePanelContents from "@/features/profile/components/ProfileSidePanelContents";
+import TopicSidePanelContents from "@/features/topic/components/TopicSidePanelContents";
 
 interface Props {
   usage: "home" | "profile" | "topic" | "post";
@@ -16,7 +13,7 @@ interface Props {
 const SidePanel = ({ usage }: Props) => {
   return (
     <div
-      className={`sticky  xl:flex flex-col hidden 2xl:max-w-[48rem] lg:max-w-[40rem] w-full overflow-y-auto  ${
+      className={`sticky xl:flex flex-col hidden 2xl:max-w-[48rem] lg:max-w-[40rem] w-full overflow-y-auto  ${
         usage === "profile"
           ? "top-[6.4rem] h-[calc(100vh-6.4rem)]"
           : "top-[5.6rem] h-[calc(100vh-5.6rem)]"
@@ -34,10 +31,11 @@ const SidePanel = ({ usage }: Props) => {
       {/* 사이드 패널 - default */}
       <div className="flex flex-col w-full bg-side-panel-background 2xl:rounded-[1.6rem] lg:rounded-[1.4rem] 2xl:p-[2.4rem] lg:p-[1rem] shadow-sm">
         {/* 포스트 생성 버튼 & 간단한 정보 */}
-        <SidePanelHeader />
+        <SidePanelHeader usage={usage} />
 
         {usage === "home" && <OriginalSidePanelContents />}
         {usage === "profile" && <ProfileSidePanelContents />}
+        {usage === "topic" && <TopicSidePanelContents />}
       </div>
 
       {/* 사이드 패널 - topic */}

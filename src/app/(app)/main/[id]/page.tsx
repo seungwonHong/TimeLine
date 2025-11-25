@@ -19,11 +19,10 @@ const Main = async ({
   params: Promise<{ id: string }>;
   searchParams: Promise<{
     type?: "posts" | "topics";
-    filter?: "recent" | "foryou" | "follower";
   }>;
 }) => {
   const { id } = await params;
-  const { type, filter } = await searchParams;
+  const { type } = await searchParams;
   const capitalizedId = id.charAt(0).toUpperCase() + id.slice(1).toLowerCase();
 
   const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -34,13 +33,15 @@ const Main = async ({
     audio: AudioLines,
     design: Paintbrush,
   };
+  console.log(type);
+  console.log(id);
 
   const IconComponent = iconMap[id.toLowerCase()] || House;
   const iconClassName =
     "2xl:w-[3.6rem] 2xl:h-[3.6rem] lg:w-[3.2rem] lg:h-[3.2rem] md:w-[2.8rem] md:h-[2.8rem] w-[3.2rem] h-[3.2rem]";
 
   return (
-    <div className="relative flex flex-col items-center justify-center 2xl:mt-[6.4rem] md:mt-[5.6rem] mt-[8rem] 2xl:px-[8rem] lg:px-[6rem] md:px-[3.2rem] px-[1.6rem] overflow-x-hidden">
+    <div className="relative flex flex-col items-center justify-center 2xl:mt-[6.4rem] md:mt-[5.6rem] mt-[8rem] 2xl:px-[8rem] lg:px-[6rem] md:px-[3.2rem] px-[1.6rem]">
       <div className="flex flex-col items-start justify-center w-full 2xl:max-w-[150rem] lg:max-w-[130rem] md:max-w-[100rem]">
         {/* 제목 */}
         <div className=" flex flex-row w-full items-center 2xl:gap-[1.6rem] lg:gap-[1.2rem] md:gap-[0.8rem] gap-[0.4rem]">
