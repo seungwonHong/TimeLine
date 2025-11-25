@@ -18,7 +18,7 @@ const TopicComponentJoin = (props: Props) => {
         onClick={() => setBookmarked(!bookmarked)}
       />
 
-      <Button className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.4rem] font-normal 2xl:rounded-[0.8rem] lg:rounded-[0.6rem] rounded-[0.4rem] hover:bg-button-hover transition-all duration-300 ease-in-out">
+      <Button className="2xl:text-[1.6rem] lg:text-[1.4rem] md:text-[1.2rem] text-[1.4rem] font-normal 2xl:!rounded-[0.8rem] lg:!rounded-[0.6rem] !rounded-[0.4rem] hover:bg-button-hover transition-all duration-300 ease-in-out">
         🔒 Join
       </Button>
     </div>
