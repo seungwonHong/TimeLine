@@ -20,9 +20,12 @@ const Main = async ({
   searchParams: Promise<{
     type?: "posts" | "topics";
   }>;
-}) => {
+  }) => {
+   console.log("Before await params");
   const { id } = await params;
+  console.log("After await params, id:", id);
   const { type } = await searchParams;
+  console.log("After await searchParams, type:", type);
   const capitalizedId = id.charAt(0).toUpperCase() + id.slice(1).toLowerCase();
 
   const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -33,8 +36,6 @@ const Main = async ({
     audio: AudioLines,
     design: Paintbrush,
   };
-  console.log(type);
-  console.log(id);
 
   const IconComponent = iconMap[id.toLowerCase()] || House;
   const iconClassName =
